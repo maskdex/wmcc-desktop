@@ -1,0 +1,184 @@
+<h1>
+  <tabbutton category='tx-record' module='history' tag='txrecord' active='true'>Transaction History</tabbutton>
+  <tabbutton category='tx-record' module='pending' tag='txrecord'>Pending Transaction</tabbutton>
+</h1>
+<holder>
+  <txrecord></txrecord>
+</holder>
+<style type="text/css">
+container.right tabbutton{
+  line-height: 30px;
+  height: 30px;
+}
+container.right > holder{
+	width: calc(100% - 20px);
+	height: calc(100% - 57px);
+  padding: 10px;
+	background: #fff;
+	display: inline-block;
+  overflow: auto;
+}
+
+container.right holder{
+  display: block;
+  color: #777;
+}
+container.right holder input[type="text"]{
+  width: calc(30% - 30px);
+  height: 20px;
+  border: 1px solid #ddd;
+  padding: 2px 10px;
+}
+
+container.right holder input[type="text"]:focus, container.right holder input[type="text"].focus{
+  border: 1px solid #4ab;
+}
+
+container.right holder input[type="submit"]{
+  border-radius: 3px;
+}
+
+container.right holder select{
+  display: inline-block;
+  height: 25px;
+  padding: 2px 10px;
+  line-height: 25px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #338899;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#55BBCC), to(#338899));
+}
+
+container.right holder select + div{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#55BBCC), to(#338899));
+  padding: 5px 0;
+}
+
+container.right holder select + div span{
+  padding: 2px 0 2px 10px;
+  cursor: pointer;
+}
+
+container.right holder select + div span:hover{
+  background-color: #225566;
+}
+
+container.right holder h2, container.right holder h2 span{
+  margin: 20px auto;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+container.right holder h2 span{
+  color: #389;
+}
+
+container.right table {
+  border-collapse:collapse;
+  line-height: 25px;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+container.right txrecord *{
+  font-family: Ubuntu, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+container.right table tr:nth-child(odd) th {
+  font-family: UbuntuM,sans-serif;
+  background-color: #efefef;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f5f5f5));
+  font-weight: normal;
+  color: #555;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+container.right table tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+container.right table tr td, container.right table tr th {
+  padding: 6px 5px;
+  position: relative;
+}
+
+container.right table tr td:nth-child(1) {
+  min-width: 130px;
+}
+
+container.right table tr td:nth-child(4){
+  width: 50%;
+  vertical-align: top;
+}
+
+container.right table tr td:nth-child(3){
+  vertical-align: top;
+}
+
+
+container.right table tr td a{
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: #389;
+}
+
+container.right table tr td a:hover{
+  text-decoration: underline;
+  color: #045;
+}
+
+container.right .page {
+  display: block;
+  text-align:center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+container.right .page a {
+  display: inline-block;
+  color: black;
+  text-align:center;
+  padding: 8px 16px;
+  margin: 1px;
+  text-decoration: none;
+}
+
+container.right .page a.active {
+  background-color: #393;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5b5), to(#393));
+  color: white;
+  border-radius: 5px;
+}
+
+container.right .page a {
+  color: #777;
+  font-weight: bold;
+}
+
+container.right .page a.disable {
+  color: #ddd;
+}
+
+container.right .page a:hover:not(.active):not(.disable) {
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pika-single {
+  margin: 5px 38px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) !important;
+}
+</style>

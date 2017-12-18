@@ -1,0 +1,119 @@
+{
+  "Tools": {
+    "Window": {
+      "error": {
+        "options_must_be_object": "`Options` must be an object."
+      }
+    }
+  },
+  "Browser": {
+    "Loader": {
+      "context_menu": {
+        "copy": "Copy",
+        "paste": "Paste",
+        "cut": "Cut",
+        "undo": "Undo",
+        "redo": "Redo",
+        "selectall": "Select all"
+      },
+      "error": {
+        "file_not_found": "No such library, module or page: File path '{0}'"
+      }
+    }
+  },
+  "Credential": {
+    "Auth": {
+      "error": {
+        "wallet_name_exists": {
+          "title": "Wallet Name Exists",
+          "text_1": "Wallet name {0} is already exist.",
+          "text_2": "Click <i>Cancel</i> to rename your new wallet."
+        },
+        "wallet_file_exists": {
+          "title": "Wallet File Exists",
+          "text_1": "Wallet file {0} is already exist.",
+          "text_2": "Click <i>Cancel</i> to rename your new wallet; or;",
+          "text_3": "If you choose <i>Overwrite</i>, all data in existing file will be lost."
+        },
+        "invalid_credential": {
+          "title": "Invalid Authentication Credentials",
+          "text_1": "Your credentials were not accepted.",
+          "text_2": "Please try again."
+        },
+        "invalid_name": {
+          "title": "Invalid Wallet Name",
+          "text_1": "Wallet name can only contain any of the following characters:",
+          "text_2": "Numbers (0-9), Letters (A-Z and a-z), Underscores (_), Hyphens (-),",
+          "text_3": "Single Space ( ), and Periods (.)"
+        },
+        "fill_input_first": "Please fill in this input first.",
+        "exceed_max_size": "Exceed max size."
+      }
+    }
+  },
+  "Auth": {
+    "Button": {
+      "overwrite": "Overwrite",
+      "cancel": "Cancel",
+      "try_again": "Try Again"
+    },
+    "Login": {
+      "your_answer": "Your Answer",
+      "select_your_wallet": "Select your wallet",
+      "date_of_birth": "Date of Birth (DD-MM-YYYY)",
+      "reset": "Reset",
+      "get_question": "GET QUESTION"
+    },
+    "Create": {
+      "wallet_name": "Wallet Name",
+      "date_of_birth": "Date of Birth (DD-MM-YYYY)",
+      "secret_question": "Secret Question / Hint",
+      "secret_answer": "Secret Answer / Password",
+      "add_secret": "+ Add Secret",
+      "reset": "Reset",
+      "create": "CREATE"
+    }
+  },
+  "Menu": {
+    "Top": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "wallet": "Wallet",
+      "send-receive-coin": "Send / Receive Coins",
+      "explorer": "Explorer",
+      "exchange": "Exchange"
+    },
+    "Side": {
+      "overview": "Overview",
+      "sign_message": "Sign Message",
+      "verify_message": "Verify Message",
+      "address_book": "Address Book",
+      "backup_wallet": "Backup Wallet",
+      "restore_wallet": "Restore Wallet",
+      "configuration": "Configuration",
+      "console": "Console",
+      "information": "Information"
+    },
+    "Auth": {
+      "login": "LOGIN",
+      "create_new_wallet": "CREATE NEW WALLET",
+      "restore_wallet": "RESTORE WALLET"
+    }
+  },
+  "Send-receive": {
+    "Send-coin": {
+      "send_coin": "Send Coin"
+    },
+    "Receive-coin": {
+      "receive_coin": "Receive Coin"
+    }
+  },
+  "Overview": {
+    "Miner": {
+      "miner": "Miner",
+      "miner_not_running": "MINER IS NOT RUNNING",
+      "start_mining": "Start Mining",
+      "stop_mining": "Stop Mining"
+    }
+  }
+}

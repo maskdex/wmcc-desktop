@@ -1,0 +1,90 @@
+<header><span>{{miner}}</span></header>
+<toggle script="chain::isFull" cls="synced" on="chain::full">
+  <holder cls="synced">
+    <h2>Chain not synced</h2>
+  </holder>
+  <holder cls="synced">
+    <toggle script="info::isMinerStarted" cls="started">
+      <holder cls="started">
+        <h2>{{miner_not_running}}</h2>
+        <submit class="button s_startMiner s_enterPress" click="info::startMining">{{start_mining}}</submit>
+      </holder>
+      <holder cls="started">
+        <!--<span>Address: <print class="ellipse">info::getAddress</print></span>-->
+        <print on>miner::getMinerInfo</print>
+        <submit class="button s_stopMiner s_enterPress" click="info::stopMining">{{stop_mining}}</submit>
+      </holder>
+    </toggle>
+  </holder>
+</toggle>
+
+<style type="text/css">
+block[module="miner"] holder * {
+  font-family: Ubuntu,sans-serif;
+}
+block[module="miner"] holder{
+  color: #777;
+  display: block;
+  text-align: center;
+}
+block[module="miner"] submit{
+  display: inline-block;
+  text-align: center;
+  padding: 8px 20px !important;
+  margin: 0;
+  border-radius: 5px !important;
+}
+block[module="miner"] holder h2{
+  color: #aaa;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 40px;
+}
+block[module="miner"] holder span{
+  color: #aaa;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+}
+block[module="miner"] holder print.ellipse{
+  display: inline-block;
+  white-space: nowrap;
+  width: calc(100% - 10px); 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+block[module="miner"] table {
+  border-collapse:collapse;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+block[module="miner"] table td {
+  white-space: nowrap;
+  padding: 6px 5px;
+  position: relative;
+}
+block[module="miner"] table td[colspan='3'] {
+  width: 100%;
+  text-align: left;
+}
+block[module="miner"] table td a{
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #389;
+  cursor: pointer;
+}
+block[module="miner"] table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+block[module="miner"] table td:nth-child(2), block[module="miner"] table td:nth-child(4){
+  font-family: MplusM,sans-serif;
+}
+</style>

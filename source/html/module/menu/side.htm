@@ -1,0 +1,55 @@
+<h1>GENERAL</h1>
+<menubutton page='menu-side_overview' tag='container.right' active='true'><i class="glyph-icon flaticon-home"></i> {{overview}}</menubutton>
+<menubutton page='menu-side_sign' tag='container.right'><i class="glyph-icon flaticon-sign"></i> {{sign_message}}</menubutton>
+<menubutton page='menu-side_verify' tag='container.right'><i class="glyph-icon flaticon-verify"></i> {{verify_message}}</menubutton>
+<menubutton page='menu-side_address' tag='container.right'><i class="glyph-icon flaticon-address"></i> {{address_book}}</menubutton>
+<menubutton page='menu-side_backup' tag='container.right'><i class="glyph-icon flaticon-backup"></i> {{backup_wallet}}</menubutton>
+<menubutton page='menu-side_restore' tag='container.right'><i class="glyph-icon flaticon-restore"></i> {{restore_wallet}}</menubutton>
+<hr>
+<h1>TOOLS</h1>
+<!--<menubutton page='menu-side_config' tag='container.right'><i class="glyph-icon flaticon-config"></i> {{configuration}}</menubutton>
+<menubutton page='menu-side_console' tag='container.right'><i class="glyph-icon flaticon-console"></i> {{console}}</menubutton>-->
+<menubutton page='menu-side_info' tag='container.right'><i class="glyph-icon flaticon-info"></i> {{information}}</menubutton>
+
+<style type="text/css">
+content container.right{
+  width: calc(100% - 220px);
+	margin-left: 220px;
+}
+content container.left{
+	padding: 10px;
+	width: 200px;
+	background: #3A3A4A;
+	background: -webkit-linear-gradient(left, #272737, #2C2C3C 35px, #3A3A4A);
+	color: #77EEFF;
+	overflow-y: scroll;
+}
+content container.left hr{
+	background: -webkit-linear-gradient(left, #242434, #2A2A3A);
+	height: 1px;
+	margin:10px 2px 5px 2px;
+}
+content container.left h1{
+	font-weight: bold;
+	padding: 10px 10px;
+}
+content container.left menubutton{
+	padding: 0 15px;
+	margin: 3px 0;
+	vertical-align: middle;
+	line-height: 35px;
+	cursor: pointer;
+	border-radius: 5px;
+	display: block;
+}
+content container.left menubutton:hover{
+	background-color: #282838;
+}
+content container.left menubutton[active]{
+	background-color: #282838;
+	cursor: inherit;
+}
+menubutton i{
+	margin-right: 20px;
+}
+</style>

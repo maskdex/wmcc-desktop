@@ -1,0 +1,348 @@
+<h1>
+  <tabbutton category='wallet' module='wallet-details' tag='walletprint' active='true'>Wallet Details</tabbutton>
+  <tabbutton category='wallet' module='switch-wallet' tag='walletprint'>Switch Wallet</tabbutton>
+  <tabbutton category='wallet' module='create-wallet' tag='walletprint'>Create New Wallet</tabbutton>
+  <tabbutton category='wallet' module='change-secret' tag='walletprint'>Change Secret</tabbutton>
+</h1>
+<holder>
+  <walletprint></walletprint>
+</holder>
+
+<style type="text/css">
+content container.right{
+  font-size: 0;
+  background: #eee;
+  width: calc(100% - 260px);
+  padding: 10px;
+}
+container.right tabbutton{
+  line-height: 30px;
+  height: 30px;
+}
+container.right > holder{
+  padding: 0 10px 5px 10px;
+  width: calc(100% - 20px);
+  max-height: calc(100% - 37px);
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+  display: inline-block;
+  overflow: auto;
+}
+walletprint *{
+  font-family: UbuntuM,sans-serif;
+  color: #333;
+  font-weight: normal;
+}
+container.right walletprint header{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+walletprint header span{
+  font-size: 18px;
+}
+walletprint header [class*=" flaticon-"]:before{
+  display: table-cell;
+  line-height: 20px;
+  font-size: 22px;
+  color: #389;
+}
+walletprint table {
+  border-collapse: collapse;
+  width: 100%;
+}
+walletprint table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+walletprint table td {
+  text-align: left;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  vertical-align: text-bottom;
+}
+walletprint table td:nth-child(2), walletprint table td:nth-child(2) * {
+  font-family: MplusM, Tahoma, Geneva, Verdana, sans-serif;
+  color: #777;
+  font-size: 13px;
+  text-align: right;
+}
+walletprint table td:nth-child(3) {
+  width: 20px;
+}
+walletprint table td:nth-child(3) i:before{
+  cursor: pointer;
+}
+walletprint table td:nth-child(3) i:hover:before{
+  color: #389;
+}
+walletcontent {
+  position: relative;
+  z-index: 2;
+}
+walletcontent holder{
+  position: relative;
+  display: block;
+}
+walletcontent, container.right walletprint header[walletheader]{
+  display: block;
+  width: 500px;
+  margin: 30px auto 0 auto;
+  position: relative;
+}
+walletcontent {
+  margin: 10px auto 30px auto;
+}
+walletcontent * {
+  color: #aaa;
+}
+
+walletcontent[hidden] {
+  display: none;
+}
+walletcontent holder i{
+  position: absolute;
+  display: inline-block;
+  margin: 3px 0 0 0;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 20px;
+  background: red;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: -webkit-linear-gradient(left, #272737, #2C2C3C 200px, #3A3A4A);
+  font-size: 18px;
+  cursor: default;
+}
+.flaticon-remove:before {
+  cursor: pointer;
+}
+holder .right {
+  position: absolute;
+  right: 4px;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0;
+  background: none;
+}
+holder .right:hover::before{
+  color: #272737;
+}
+walletcontent holder [class*=" flaticon-"]:before{
+  display: table-cell;
+  line-height: 30px;
+  font-size: 22px;
+}
+walletcontent holder [class*=" flaticon-"].flaticon-otp:before {
+  font-size: 30px;
+}
+walletcontent holder input[type='text'], walletcontent holder input[type='password'], walletcontent holder select{
+  display: inline-block;
+  width: 420px;
+  height: 30px;
+  margin: 3px 0 0 60px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #585868;
+}
+walletcontent holder select{
+  width: 440px;
+}
+walletcontent holder option {
+  font-size: 14px;
+}
+walletcontent result span {
+  display: inline-block;
+  width: calc(100% - 20px);
+  line-height: 30px;
+  height: 30px;
+  font-family: UbuntuM,sans-serif;
+  color: #fff;
+  padding: 1px 10px;
+  background-color: rgba(0,100,0,.80);
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+walletcontent result span.error {
+  background-color: rgba(220,0,0,.80);
+  margin-top: 15px;
+}
+walletcontent result span:before {
+  content: '✔';
+  margin-right: 10px;
+}
+walletcontent result span.error:before {
+  content: '✘';
+}
+walletcontent result i{
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 30px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  cursor: pointer;
+  text-align: center;
+}
+walletcontent result i:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+walletcontent result [class*=" flaticon-"]:before{
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  vertical-align: top;
+}
+walletcontent result i:nth-child(1){
+  right: 50px;
+  border-radius: 0;
+  border-right: 2px solid rgba(0,0,0,0.2);
+}
+holder ::-webkit-input-placeholder, walletcontent holder select{
+  color: #aaa;
+  font-size: 12px;
+}
+
+holder input[type='text']:hover, holder input[type='password']:hover{
+  background-color: #494959;
+}
+
+holder input[type='text']:focus, input[type='password']:focus{
+  background-color: #3A3A4A;
+}
+
+select + div.dropdown {
+  right: 0;
+  padding-bottom: 5px !important; 
+  padding-top: 5px !important;
+  box-shadow: 0px 0px 2px #585868, inset 0 0 0 1px #585868;
+  margin-top: 2px;
+  max-height: 110px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: auto;
+}
+
+select + div.dropdown span {
+  padding: 2px 15px;
+  cursor: pointer;
+  color: #aaa;
+}
+select + div.dropdown span:not(:nth-child(1)) {
+  color: #fff;
+  font-size: 13px;
+}
+
+select + div.dropdown span:hover {
+  background-color: #272737;
+}
+
+span.button {
+  display: block;
+  clear: both;
+  border-radius: 5px;
+  width: 480px;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+modalbox .button {
+  border-radius: 5px;
+}
+
+span.insert, span.reset {
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #272737;
+  margin: 10px 0;
+}
+span.insert{
+  margin-left: 10px;
+}
+span.insert:before{
+  content: '|';
+  padding-right: 10px;
+}
+span.insert a {
+  color: #333;
+  font-weight: bold;
+}
+span.insert a:hover, span.reset:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+span.insert:hover::before {
+  text-decoration: none;
+}
+modalbox{
+  margin: -40px 0 0 -50px;
+  height: calc(100% + 55px);
+  width: calc(100% + 100px);
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+}
+modalbox *{
+  font-family: "Century Gothic", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+modalbox b{
+  font-weight: bold;
+}
+modalbox div:nth-child(2){
+  text-align: center;
+  height: calc(100% - 40px);
+}
+modalbox div:nth-child(2):before {
+  content: ' ';
+  display: inline-block;
+  font-size: 13px;
+  height: calc(100% - 60px);
+  vertical-align: middle;
+  color: #272737;
+}
+modalbox div:nth-child(1) span {
+  color: #fff;
+}
+modalbox div:nth-child(2) span{
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 13px;
+}
+holder counter{
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  font-size: 11px;
+  line-height: 12px;
+  top:2px;
+  right:2px;
+  padding: 3px;
+  color: #55BBCC;
+  text-align: center;
+  font-weight:bold;
+}
+holder div.dropdown::-webkit-scrollbar-track, holder div.dropdown::-webkit-scrollbar, holder div.dropdown::-webkit-scrollbar-thumb {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pika-single {
+  margin-left: -100px;
+  margin-top: 0;
+}
+</style>

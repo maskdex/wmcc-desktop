@@ -1,0 +1,65 @@
+<header><span>Network</span></header>
+<span>Total nodes - Last 10 block</span>
+<div class='chart' id='p1'>
+	<canvas id='c1'></canvas>
+</div>
+<span>Total clients - Last 10 block</span>
+<div class='chart' id='p2'>
+	<canvas id='c2'></canvas>
+</div>
+<include src='../../source/vendor/chart.min.js'></include>
+<style type="text/css">
+.chart {
+	margin: 0 0 5px 5px;
+	width:290px;
+	height: 50px;
+}
+block[module="network"] > span{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	background: #389;
+	color: #fff;
+	padding: 2px 0;
+}
+</style>
+<!--<table>
+	<tr>
+		<td>No. of Connected Nodes</td><td>:</td>
+		<td>32</td>
+	</tr>
+	<tr>
+		<td>No. of Connected Clients</td><td>:</td>
+		<td>65</td>
+	</tr>
+	<tr>
+		<td>Total of Nodes</td><td>:</td>
+		<td>1354</td>
+	</tr>
+	<tr>
+		<td>Total of clients</td><td>:</td>
+		<td>2478</td>
+	</tr>
+</table>
+<style type="text/css">
+block[module="network"] table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	max-width: 100%;
+}
+block[module="network"] table tr:nth-child(even){
+	background: #eee;
+}
+block[module="network"] table tr td{
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 3px 10px;
+}
+block[module="network"] table tr td:nth-child(1){
+	width: auto;
+}
+block[module="network"] table tr td:nth-child(3){
+	text-align: right;
+}
+</style>-->

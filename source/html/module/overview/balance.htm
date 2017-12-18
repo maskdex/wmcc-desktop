@@ -1,0 +1,74 @@
+<header><span>Balances</span></header>
+<holder>
+  <i class="glyph-icon flaticon-wallets"></i>
+  <span>
+    <print>info::getWalletID</print>
+    <print>info::getAccountName</print>
+    <a>Wallet [account]</a>
+  </span>
+</holder>
+<holder><i class="glyph-icon flaticon-wallet_out"></i><span><print on>balance::getAvailable</print><a>Available (Spendable)</a></span></holder>
+<holder><i class="glyph-icon flaticon-pending"></i><span><print on>balance::getPending</print><a>Sending/Receiving (Pending)</a></span></holder>
+<holder><i class="glyph-icon flaticon-rig"></i><span><print on>balance::getImmature</print><a>Recently Mined (Immature Coins)</a></span></holder>
+<holder><i class="glyph-icon flaticon-wmcc"></i><span><print on>balance::getTotal</print><a>Total</a></span></holder>
+<style type="text/css">
+block[module="balance"] holder{
+	color: #777;
+	display: block;
+}
+block[module="balance"] holder:nth-child(even){
+	background: #eee;
+}
+block[module="balance"] holder [class*=" flaticon-"]:before{
+	line-height: 40px;
+	font-size: 22px;
+	padding: 0 10px;
+	vertical-align: top;
+	color: #389;
+}
+block[module="balance"] holder * {
+  font-family: Ubuntu,sans-serif;
+}
+block[module="balance"] holder span{
+	width: calc(100% - 52px);
+	display: inline-block;
+	position: relative;
+	top: 3px;
+}
+block[module="balance"] holder span print, block[module="balance"] holder span a{
+	width: 100%;
+	top: 0;
+}
+block[module="balance"] holder span print{
+	position: relative;
+	left: 0;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+block[module="balance"] holder span a{
+	line-height: 12px;
+	font-size: 12px;
+	color: #999;
+	padding-bottom: 7px;
+}
+block[module="balance"] holder div{
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+block[module="balance"] holder print:nth-child(2){
+  background-color: #6ab;
+  height: 17px;
+  top:-2px;
+  line-height: 17px;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-size: 11px;
+  font-weight: normal;
+  display: inline-block;
+  width: auto;
+}
+</style>

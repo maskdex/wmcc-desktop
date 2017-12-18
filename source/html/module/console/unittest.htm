@@ -1,0 +1,122 @@
+<console></console>
+<span class="button">Start</span>
+<div class="checkbox">
+	<input type="checkbox" value="1" id="checkbox-auto-scroll" name="" />
+	<label for="checkbox-auto-scroll"></label>
+	<span>{{auto_scroll}}</span>
+</div>
+<div class="checkbox">
+	<input type="checkbox" value="1" id="checkbox-show-result" name="" />
+	<label for="checkbox-show-result"></label>
+	<span>{{show_result}}</span>
+</div>
+<div class="checkbox">
+	<input type="checkbox" value="0" id="checkbox-delay" name="" />
+	<label class="checkbox-off" for="checkbox-delay"></label>
+	<span>{{delay}}</span>
+</div>
+
+<require src='./console.js'></require>
+<include src='./unittest.js'></include>
+
+<style type="text/css">
+console{
+	width: 620px;
+	margin: 10px 0;
+	height: 445px;
+}
+
+console table td{
+	padding: 3px 5px;
+}
+
+console table td:first-child{
+	min-width: 100px;
+}
+
+consoleprint input[type="checkbox"]{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.checkbox{
+	margin: 3px 10px 3px 0;
+}
+
+.console-class, .console-method, .console-description, .console-pass, .console-fail, .console-result, .console-results{
+	display: flex;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 15px;
+	padding: 1px;
+	margin: 2px 5px;
+}
+.console-class::before, .console-method::before, .console-description::before, 
+.console-pass::before, .console-fail::before, .console-result::before, .console-results::before {
+	display: flex;
+	content: "{{class}}";
+	width: 80px;
+	min-width: 80px;
+	margin-right: 5px;
+	font-size: 10px;
+	padding:2px 10px;
+	margin-top: -2px;
+	background-color: #245;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	color: #ddd;
+}
+.console-method{
+	font-size: 13px;
+}
+.console-method::before {
+	background-color: #267;
+	content: "{{method}}";
+}
+.console-description{
+	font-size: 12px;
+}
+.console-description::before {
+	background-color: #289;
+	content: "{{description}}";
+}
+.console-pass, .console-fail{
+	font-size: 12px;
+	font-weight: normal;
+}
+.console-pass::before {
+	background-color: #393;
+	content: "{{passed}}";
+}
+.console-fail::before {
+	min-width: 80px;
+	background-color: #933;
+	content: "{{failed}}";
+	max-height: 15px;
+	vertical-align: middle;
+}
+.console-result{
+	font-size: 12px;
+	font-weight: normal;
+}
+.console-result::before {
+	background-color: #993;
+	content: "{{result}}";
+}
+.console-results{
+	font-size: 15px;
+}
+.console-results::before {
+	background-color: #339;
+	content: "{{test_result}}";
+}
+console span{
+	-webkit-user-select: all;
+	user-select: all;
+	cursor: default;
+}
+.button{
+	display: inline-block;
+}
+</style>

@@ -1,0 +1,128 @@
+<notifycontent></notifycontent>
+<trigger script='self.node.attach.add("minerFoundBlock", "notification", $($("notifycontent")[0]));'></trigger>
+<style type="text/css">
+notification {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  z-index: 99;
+  height: 0;
+}
+notification * {
+  font-family: Ubuntu, sans-serif;
+  color:#555;
+  font-weight: normal;
+}
+notification table {  
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px #999;
+  position: relative;
+  width: 100%;
+  min-width: 150px;
+  background: -webkit-linear-gradient(left, #fcfcfc, #f8f8f8 150px, #fafafa);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: rgba(0,0,0, .8);
+  text-shadow: 0 1px 0 #fcfcfc;
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .1) inset;
+  text-align: left;
+  margin-bottom: 5px;
+  -webkit-animation:fade 20s;
+  -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes fade {
+  0% { opacity: 1; }
+  98% { opacity: 1; top:0; }
+  99% { opacity: 0.5; top:10px; }
+  100% { opacity: 0; top:0; display: none; }
+}
+notification table th:not(:first-child), notification table td{
+  padding-left: 10px;
+}
+notification table th:nth-child(2), notification table td:first-child{
+  padding-left: 20px;
+}
+notification table td:last-child{
+  padding-right: 10px;
+}
+notification table tr:first-child th{
+  padding-top: 5px;
+}
+notification table tr:last-child td{
+  padding-bottom: 5px;
+}
+notification table i.glyph-icon:before{
+  font-size: 30px;
+  padding: 10px;
+  background-color: #389;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: rgba(252,252,252,0.3) 0px 3px 3px;
+  margin-right: 10px;
+}
+notification table.even * {
+  color: #ccc;
+}
+notification table.even {
+  background: -webkit-linear-gradient(left, #272737, #2C2C3C 150px, #3A3A4A);
+  text-shadow: 0 1px 0 #272737;
+}
+notification table.even i.glyph-icon:before {
+  text-shadow: rgba(39,39,39,0.3) 0px 3px 3px;
+}
+notification table i.flaticon-remove{
+  display: inline-block;
+  position: absolute;
+  left: -10px;
+  top: calc(50% - 7px);
+}
+notification table i.flaticon-remove:after{
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  content: " ";
+}
+notification table i.flaticon-remove:before,
+notification table.even i.flaticon-remove:before{
+  z-index: 2;
+  font-size: 20px;
+  height: 19px;
+  width: 19px;
+  padding: 0;
+  background-color: #c33;
+  color: transparent;
+  text-shadow: rgba(0,0,0,0.1) 0px 2px 2px;
+  cursor: pointer;
+  margin: -2px 0 0 -1px;
+  vertical-align: top;
+  position: absolute;
+}
+notification table i.flaticon-remove:hover:before{
+  background-color: #f00;
+}
+notification table.minerfound tr th{
+  font-family: UbuntuM, sans-serif;
+  font-size: 14px;
+  padding-bottom: 5px;
+  background-color: #389;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(252,252,252,0.5) 0px 3px 3px;
+}
+notification table.minerfound.even tr th {
+  text-shadow: rgba(39,39,39,0.3) 0px 3px 3px;
+}
+notification table.minerfound tr th[rowspan="3"]{
+  border-right: 3px solid #C5D5D5;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 2 100%;
+}
+</style>

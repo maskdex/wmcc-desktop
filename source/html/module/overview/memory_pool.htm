@@ -1,0 +1,85 @@
+<header><span>Memory Pool</span></header>
+<holder><span>
+  <div class="wrapper"><span><a>Unconfirmed Transactions:</a></span></div>
+  <div class="wrapper"><circularbeat caption="Count"><a><print on>mempool::getUnconfirmTxCount</print></a><a>Count</a></circularbeat></div>
+  <div class="wrapper"><circularbeat caption="Size"><a><print on>mempool::getUnconfirmTxSize</print></a><a>Size &#8214; <b>KB</b></a></circularbeat></div>
+</span></holder>
+<hr>
+<header><span>Latest Transactions</span></header>
+<holder><print on>mempool::getLatestTxs</print></holder>
+
+<style type="text/css">
+block[module="memory_pool"] holder *{
+  font-family: Ubuntu,sans-serif;
+}
+block[module="memory_pool"] .wrapper {
+  display: inline-block;
+  height: 86px;
+  width: 92px;
+}
+block[module="memory_pool"] .wrapper span, block[module="memory_pool"] circularbeat {
+  position: relative;
+  display: table;
+  height: 86px;
+  width: 90px;
+  margin-left: 5px;
+  border-radius: 50%;
+  text-align: center;
+}
+block[module="memory_pool"] span a, block[module="memory_pool"] circularbeat a print  {
+  display: table-cell;
+  vertical-align: middle;
+}
+block[module="memory_pool"] circularbeat a print  {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 0 0 0;
+}
+block[module="memory_pool"] circularbeat{
+  width: 78px;
+  height: 70px;
+  margin: 0 10px;
+  border: 5px solid #389;
+  background-color: #272737;
+  color: #ccc;
+}
+block[module="memory_pool"] circularbeat a {
+  display:table-row;
+  vertical-align: middle;
+}
+block[module="memory_pool"] table {
+  border-collapse:collapse;
+  width: 100%;
+  text-align: center;
+}
+block[module="memory_pool"] table td {
+  white-space: nowrap;
+  padding: 5px 5px;
+  position: relative;
+}
+block[module="memory_pool"] table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+block[module="memory_pool"] table td:first-child {
+  width: 100%;
+  text-align: left;
+}
+block[module="memory_pool"] table td a{
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #389;
+  cursor: pointer;
+}
+block[module="memory_pool"] h2{
+  color: #777;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+}
+</style>

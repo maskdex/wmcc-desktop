@@ -1,0 +1,69 @@
+<console>
+	<table>
+		<tr>
+			<td>
+				18/05/2017 15:06
+			</td>
+			<td>
+				<i class="glyph-icon flaticon-out"></i>
+			</td>
+			<td>
+				<p class="selectall" ondragstart="return false;">Welcome to WMCC</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				18/05/2017 15:06
+			</td>
+			<td>
+				<i class="glyph-icon flaticon-in"></i>
+			</td>
+			<td>
+				<p class="selectall" ondragstart="return false;">Type `help` for an overview of available commands.<br>Type `test --all` to perform whole unit testing.</p>
+			</td>
+		</tr>
+</table>
+</console>
+<input type="text" value="">
+
+<script type="text/javascript">
+
+$(function() {
+	$("#console textarea").change(function() {
+		scrollToBottom();
+	});
+});
+</script>
+
+<style type="text/css">
+container.right include span{
+	display: inline-block;
+}
+console{
+	width: 620px;
+	margin: 10px 0 0 0;
+	height: 450px;
+}
+console table td{
+	padding: 3px 5px;
+}
+console table td:first-child{
+	min-width: 100px;
+}
+consoleprint input{
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="110" height="25"><text x="8" y="15" style="font: 12px Century Gothic, Tahoma;background-color:#ccc;">wmcc</text><text x="50" y="16" style="font: 12px Century Gothic, Tahoma;background-color:#ccc;"> > </text></svg>') no-repeat;
+	margin-top:-1px;
+	width: 558px;
+	padding: 3px 5px 3px 65px;
+	border: 1px solid #bbb;
+}
+
+.flaticon-in:before, .flaticon-out:before {
+	color: #585;
+	font-size: 15px;
+	margin: 0;
+}
+.flaticon-out:before {
+	color: #855;
+}
+</style>

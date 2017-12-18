@@ -1,0 +1,565 @@
+*, body, html {
+	font-family: "Century Gothic", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 12px;
+	height: auto;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+body {
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+}
+/*font*/
+@font-face {
+	font-family: "Icomoon";
+	src: url("../font/icomoon.eot");
+	src: url("../font/icomoon.eot?#iefix") format("embedded-opentype"),
+		url("../font/icomoon.woff") format("woff"),
+		url("../font/icomoon.ttf") format("truetype"),
+		url("../font/icomoon.svg#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "UbuntuM";
+  src: url("../font/Ubuntu-M.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../font/Ubuntu-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("../font/UbuntuMono-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mplus";
+  src: url("../font/mplus-1m-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MplusM";
+  src: url("../font/mplus-1m-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: "Icomoon";
+		src: url("../font/icomoon.svg#icomoon") format("svg");
+	}
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Icomoon;
+	font-size: 20px;
+	font-style: normal;
+	color: #55BBCC;
+	vertical-align: middle;
+}
+
+.flaticon-out:before { content: "\f100"; }
+.flaticon-in:before { content: "\f101"; }
+.flaticon-verify:before { content: "\f102"; }
+.flaticon-sign:before { content: "\f103"; }
+.flaticon-address:before { content: "\f104"; }
+.flaticon-info:before { content: "\f105"; }
+.flaticon-backup:before { content: "\f106"; }
+.flaticon-console:before { content: "\f107"; }
+.flaticon-restore:before { content: "\f108"; }
+.flaticon-config:before { content: "\f109"; }
+.flaticon-home:before { content: "\f10a"; }
+.flaticon-wallet:before { content: "\f10b"; }
+.flaticon-date:before { content: "\f10c"; }
+.flaticon-answer:before { content: "\f10d"; }
+.flaticon-hint:before { content: "\f10e"; }
+.flaticon-wallets:before { content: "\f10f"; }
+.flaticon-wmcc:before { content: "\f110"; }
+.flaticon-pending:before { content: "\f111"; }
+.flaticon-wallet_out:before { content: "\f112"; }
+.flaticon-record:before { content: "\f113"; }
+.flaticon-wallet_manage:before { content: "\f114"; }
+.flaticon-swap:before { content: "\f115"; }
+.flaticon-coin_minus:before { content: "\f116"; }
+.flaticon-coin_add:before { content: "\f117"; }
+.flaticon-coin:before { content: "\f118"; }
+.flaticon-key:before { content: "\f119"; }
+.flaticon-warning:before { content: "\f11a"; }
+.flaticon-remove:before { content: "\f11b"; }
+.flaticon-continue:before { content: "\f11c"; }
+.flaticon-send:before { content: "\f11d"; }
+.flaticon-receive:before { content: "\f11e"; }
+.flaticon-qrcode:before { content: "\f11f"; }
+.flaticon-copy:before { content: "\f120"; }
+.flaticon-erase:before { content: "\f121"; }
+.flaticon-rig:before { content: "\f122"; }
+.flaticon-rig2:before { content: "\f123"; }
+.flaticon-search:before { content: "\f124"; }
+.flaticon-paste:before { content: "\f125"; }
+.flaticon-gear:before { content: "\f109"; }
+.flaticon-logout:before { content: "\f127"; }
+.flaticon-otp:before { content: "\f128"; }
+.flaticon-network:before { content: "\f129"; }
+.flaticon-id:before { content: "\f12a"; }
+.flaticon-id2:before { content: "\f12b"; }
+.flaticon-account-lock:before { content: "\f12c"; }
+.flaticon-account:before { content: "\f12d"; }
+/*end font*/
+:not(input):not(textarea), :not(input):not(textarea)::after, :not(input):not(textarea)::before {
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+i.glyph-icon{
+	color: red !important;
+}
+
+.selectable{
+	-webkit-user-select: text;
+	user-select: text;
+	cursor: default;
+}
+
+.selectall{
+	-webkit-user-select: all;
+	user-select: all;
+	cursor: default;
+}
+
+input, button, textarea, select, :focus {
+    outline: none;
+}
+
+a:not([draggable=true]), img:not([draggable=true]) {
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+a[href^="http://"], a[href^="https://"], a[href^="ftp://"] {
+	-webkit-user-drag: auto;
+	user-drag: auto;
+}
+
+content container{
+	position: absolute;
+	height: calc(100vh - 60px);
+}
+
+content container.right, content container.half{
+  width: calc(100% - 220px);
+	margin-left: 220px;
+	overflow-y: scroll;
+	color: #3A3A4A;
+}
+
+content container.right h1{
+	line-height: 30px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+content container.right h1 tabbutton{
+	display: inline-block;
+	line-height: 30px;
+	color: #338899;
+	font-size: 14px;
+	margin-right: 20px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+content container.right h1 tabbutton:hover{
+	border-bottom: 3px solid #CCCCCC;
+}
+
+content container.right h1 tabbutton[active]{
+	color: #4499aa;
+	border-bottom: 3px solid #CCCCCC;
+	font-weight: bold;
+	cursor: inherit;
+}
+
+content container.half{
+  width: calc(50% - 20px);
+  margin-left: 0;
+}
+
+content container.half:nth-child(2){
+  margin-left: 50%;
+}
+
+content container::-webkit-scrollbar-track, console::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	background-color: #FFF;
+}
+
+content container::-webkit-scrollbar, console::-webkit-scrollbar, ::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: #F5F5F5;
+}
+
+content container::-webkit-scrollbar-thumb, console::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+	background-color: #2C2C3C;
+}
+
+.button {
+  font-family: UbuntuM,sans-serif;
+	padding: 5px 30px;
+	color: #fff;
+	text-shadow: -2px 2px #338899;
+	background-color: #55BBCC;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#55BBCC), to(#338899));
+	-webkit-box-shadow: inset 0 0 0 1px #225566;
+	border: none;
+	-webkit-border-radius: 8px;
+	cursor: pointer;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+button:hover, .button:hover {
+	box-shadow: inset 0 0 0 1px #225566,0 1px 5px #183848;
+}
+
+button:active, .button:active, .button.active, button.active {
+	box-shadow: inset 0 0 0 1px #225566,inset 0 5px 30px #183848;
+}
+
+.button.active, button.active {
+  cursor: inherit;
+}
+
+.button.red, button.red {
+  text-shadow: -2px 2px #DD2233;
+  background-color: #FF5566;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF5566), to(#DD2233));
+  -webkit-box-shadow: inset 0 0 0 1px #DD2233;
+}
+button.red:hover, .button.red:hover {
+  box-shadow: inset 0 0 0 1px #DD2233,0 1px 5px #812121;
+}
+
+button.red:active, .button.red:active, .button.active.red, button.active.red {
+  box-shadow: inset 0 0 0 1px #DD2233,inset 0 5px 30px #812121;
+}
+
+
+console{
+	display: inline-block;
+	border:none;
+	background: #ddd;
+	margin:0;
+	padding: 5px;
+	resize: none;
+	overflow-y: scroll;
+}
+
+console table tr{
+	vertical-align: top;
+}
+
+console table td{
+	padding: 3px 5px;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.checkbox{
+	display: inline-block;
+	float: right;
+	height: 21px;
+	background: #333;
+	border-radius: 25px;
+	position: relative;
+}
+
+.checkbox:before{
+	content: 'On';
+	position: absolute;
+	top: 3px;
+	left: 8px;
+	height: 2px;
+	color: #55BBCC;
+	font-size: 12px;
+}
+
+.checkbox:after {
+	content: 'Off';
+	position: absolute;
+	top: 3px;
+	left: 35px;
+	height: 2px;
+	color: #ddd;
+	font-size: 12px;
+}
+.checkbox label {
+	display: block;
+	width: 26px;
+	height: 11px;
+	border-radius: 25px;
+
+	transition: all .1s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	z-index: 1;
+	left: 30px;
+	background: #5bc;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+	left: 6px;
+	background: #ddd;
+}
+
+.checkbox span {
+	display: inline-block;
+	margin-top: 3px;
+	margin-left: 25px;
+	padding-right: 15px;
+	color: #ddd;
+}
+
+.checkbox label.checkbox-off {
+	left: 6px;
+	background: #ddd;
+}
+
+.checkbox input[type=checkbox]:checked + label.checkbox-off {
+	left: 30px;
+	background: #5bc;
+}
+clone{
+	display: none;
+}
+tooltip {
+	position: fixed;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-shadow: -1px 1px #300;
+	background-color:#933;
+	-webkit-box-shadow: inset 0 0 0 1px #933;
+	border: none;
+	color: #fff;
+}
+tooltip [class*=" flaticon-"]:before{
+	font-size: 15px;
+	line-height: 15px;
+	margin-right: 5px;
+	color: #fff;
+}
+tooltip:after, tooltip:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+tooltip:after {
+	border-color: rgba(85, 136, 153, 0);
+	border-right-color: #933;
+	border-width: 5px;
+	margin-top: -5px;
+}
+tooltip:before {
+	border-color: rgba(68, 119, 136, 0);
+	border-right-color: #933;
+	border-width: 5px;
+	margin-top: -5px;
+}
+modalbox{
+	position: fixed;
+	display: inline-block;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+modalbox *{
+  font-family: Ubuntu,sans-serif;
+  color: #333;
+}
+modalbox div:nth-child(1){
+	color: #fff;
+}
+modalbox div:nth-child(1) span{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	font-size: 15px;
+	width: calc(100% - 50px);
+	padding: 10px 10px;
+	background: #e2525c;
+  color: #fff;
+}
+modalbox div:nth-child(1) i{
+	display: inline-block;
+	float: right;
+	background: #e2525c;
+	height: 40px;
+	line-height: 40px;
+	width: 30px;
+	color: #fff;
+  cursor: pointer;
+}
+modalbox div:nth-child(1) span.error, modalbox div:nth-child(1) span.error + i{
+  background: #e2525c;
+}
+modalbox div:nth-child(1) span.confirm, modalbox div:nth-child(1) span.confirm + i{
+  background: #389;
+}
+modalbox div:nth-child(1) .flaticon-remove:before{
+	font-size: 20px;
+	color: #fff;
+}
+modalbox div:nth-child(1) .flaticon-remove:hover::before{
+	font-size: 20px;
+	opacity: 0.5;
+}
+modalbox.otp{
+  background: -webkit-linear-gradient(left, #272737, #2C2C3C 35px, #3A3A4A);
+}
+modalbox.otp *{
+  font-family: UbuntuM,sans-serif;
+  font-weight: normal;
+}
+modalbox.otp span *{
+  display: inline-block;
+}
+modalbox.otp div:nth-child(2) {
+  position: relative;
+}
+modalbox.otp div:nth-child(2) span{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+modalbox.otp span a{
+  color: #eee;
+}
+modalbox.otp span b{
+  margin: 10px auto;
+  font-size: 36px;
+  color: #389;
+}
+modalbox.otp span note{
+  display: inline-block;
+  font-size: 12px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+modalbox.otp span i{
+  margin: 12px auto 10px 10px;
+  vertical-align: top;
+}
+modalbox.otp span i:before{
+  font-size: 20px;
+  line-height: 40px;
+  cursor: pointer;
+  color: #5bc;
+}
+modalbox.otp span i:hover:before{
+  color: #9ef;
+}
+checkbox ul li{
+  color: #AAAAAA;
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-right:30px;
+}
+
+checkbox ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+checkbox ul li label{
+  display: block;
+  position: relative;
+  padding: 5px 10px 5px 25px;
+  margin: 0 auto;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.10s linear;
+}
+
+checkbox ul li:hover label{
+  color: rgba(44,44,60,.90);
+}
+
+checkbox ul li .check{
+  display: block;
+  position: absolute;
+  border: 2px solid #AAAAAA;
+  border-radius: 100%;
+  height: 14px;
+  width: 14px;
+  top: 3px;
+  left: 0;
+  z-index: 5;
+  transition: border .10s linear;
+  -webkit-transition: border .10s linear;
+}
+
+checkbox ul li:hover .check {
+  border: 2px solid rgba(44,44,60,.90);
+}
+
+checkbox ul li .check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  transition: background 0.10s linear;
+  -webkit-transition: background 0.10s linear;
+}
+
+checkbox input[type=radio]:checked ~ .check {
+  border: 2px solid rgba(44,44,60,.90);
+}
+
+checkbox input[type=radio]:checked ~ .check::before{
+  background: rgba(44,44,60,.90);
+}
+
+checkbox input[type=radio]:checked ~ label{
+  color: rgba(44,44,60,.90);
+}

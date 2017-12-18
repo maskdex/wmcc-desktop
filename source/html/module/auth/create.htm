@@ -1,0 +1,21 @@
+<holder><i class="glyph-icon flaticon-wallet"></i><input type="text" name="name" class="r_maxbuffer r_isname" placeholder="{{wallet_name}}"></holder>
+<holder><i class="glyph-icon flaticon-date"></i><input type="text" name="dob" class="r_calendar r_digitdash" placeholder="{{date_of_birth}}"></holder>
+<holder><i class="glyph-icon flaticon-hint"><counter>1</counter></i><input type="text" name="question_1" class="r_maxbuffer" placeholder="{{secret_question}}"></holder>
+<holder><i class="glyph-icon flaticon-answer"><counter>1</counter></i><input type="password" name="answer_1" class="r_togglePassword" placeholder="{{secret_answer}}"></holder>
+
+<span class="insert r_secret_insert"><a>{{add_secret}}<a></span>
+<span class="reset s_secret_reset">{{reset}}</span>
+<span class="button s_wallet_create s_enterPress">{{create}}</span>
+
+<clone id="wallet_secret">
+	<holder>
+		<i class="glyph-icon flaticon-hint"><counter>[count]</counter></i>
+		<i class="glyph-icon flaticon-remove r_wallet_remove right"></i>
+		<input type="text" name="question" class="r_maxbuffer" placeholder="{{secret_question}}">
+	</holder>
+	<holder>
+		<i class="glyph-icon flaticon-answer"><counter>[count]</counter></i>
+		<i class="glyph-icon flaticon-remove r_wallet_remove right"></i>
+		<input type="password" name="answer" class="r_togglePassword" placeholder="{{secret_answer}}">
+	</holder>
+</clone>

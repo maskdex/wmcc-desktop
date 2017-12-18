@@ -1,0 +1,174 @@
+<updatecontent><h2>Checking for update</h2></updatecontent>
+  <!--
+<updatecontent class="completed">
+  <table>
+    <tr>
+      <td><div>Update available! WMCC Client v1.1.0-beta.1, you must restart this application to apply new update.</div></td>
+      <td><submit>Restart Now</submit></td>
+      <td></td>
+      <td><submit>Later</submit></td>
+    </tr>
+  </table>
+</updatecontent>
+<updatecontent class="progress">
+  <table>
+    <tr>
+      <td><span class="loading"><span class="progress_holder"><span class="progress_bar"></span><span id="prog_status">Downloading update: 0%</span></span></span></td>
+    </tr>
+  </table>
+</updatecontent>-->
+<style type="text/css">
+copyright + updater updatecontent {
+  bottom: 40px;
+}
+updatecontent {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 40px;
+}
+updatecontent.completed {
+  animation: blinking 1s 10;
+}
+@-webkit-keyframes blinking {
+  0%, 49% {
+    background-color: rgba(0, 50, 0, 0.7);
+  }
+  50%, 100% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+updatecontent * {
+  font-family: UbuntuM, sans-serif;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+updatecontent table {
+  border-collapse: collapse;
+}
+updatecontent table td {
+  border-collapse: collapse;
+}
+updatecontent h2, updatecontent h3 {
+  font-size: 14px;
+  line-height: 30px;
+  height: calc(100% - 10px);
+  width: 100%;
+  padding: 5px 20px ;
+  text-align: center;
+}
+updatecontent h2:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+updatecontent div {
+  font-size: 13px;
+  line-height: 30px;
+  height: calc(100% - 10px);
+  padding: 5px 20px ;
+  overflow: hidden;
+  white-space: pre;
+}
+updatecontent.progress {
+  z-index: 99;
+  pointer-events: none;
+  opacity: .8;
+}
+updatecontent.progress .loading{
+  position: absolute;
+  top: calc(50% - 12px);
+  width: calc(100% - 70px);
+  left: 30px;
+}
+updatecontent.progress .progress_holder{
+  display: inline-block;
+  width: 100%;
+  height: 18px;
+  border-radius: 2px;
+  background: #20222A;
+  padding: 3px;
+  margin: 0;
+  border: 1px solid #1A1C21;
+}
+
+updatecontent.progress .progress_bar{
+  display:inline-block;
+  width: 50%;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid #2A2B2F;
+  background: #389; /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(54,168,233,1) 0%, rgba(17,126,210,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(54,168,233,1)), color-stop(100%,rgba(17,126,210,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(54,168,233,1) 0%,rgba(17,126,210,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(54,168,233,1) 0%,rgba(17,126,210,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(54,168,233,1) 0%,rgba(17,126,210,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(54,168,233,1) 0%,rgba(17,126,210,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36a8e9', endColorstr='#117ed2',GradientType=0 ); /* IE6-9 */
+  box-shadow: inset 0 1px 0 #4dc8db, 0 1px 0 #393C45;
+  padding: 0;
+  margin: 0;
+}
+
+updatecontent.progress #prog_status{
+  position: absolute;
+  line-height: 18px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+updatecontent.completed td:nth-child(1) {
+  max-width: 650px;
+  padding-right: 10px;
+}
+updatecontent.completed td:nth-child(2) {
+  background: rgba(0, 0, 0, 0.7);
+}
+updatecontent.completed td:hover:nth-child(2) {
+  background: rgba(0, 0, 0, 1);
+}
+updatecontent.completed td:nth-child(4) {
+  background: rgba(0, 0, 0, 0.3);
+}
+updatecontent.completed td:hover:nth-child(4) {
+  background: rgba(0, 0, 0, 0.5);
+}
+updatecontent.completed td:nth-child(even) {
+  max-width: 120px;
+}
+updatecontent.completed td:nth-child(even) submit {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+  height: 38px;
+  line-height: 40px;
+  overflow: hidden;
+  text-transform: uppercase;
+  white-space: pre;
+}
+updatecontent.completed td:nth-child(3) {
+  width: 10px;
+}
+
+</style>

@@ -1,0 +1,102 @@
+<header><i class="glyph-icon flaticon-receive"></i><span>{{receive_coin}}</span><p>Share WMCC address with others, so they can send you wmcoins.</p></header>
+<holder>
+  <span>Copy and share this address or QR Code.</span>
+</holder>
+<holder>
+  <span>Your WMCC Address:</span><hr>
+  <span><print class="address r_copyAddress">info::getTempReceive</print></span>
+  <p>Wallet will automatically save this address to your address book once you click Copy or on the address above.</p>
+</holder>
+<separator>OR</separator>
+<holder>
+  <span>Make a request with specific amount for the above address.</span>
+</holder>
+<holder>
+  <span>Amount:</span><hr>
+  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="wmcc" placeholder="0.0000" /><a>wmcc</a>
+  <i class="glyph-icon flaticon-swap"></i>
+  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="btc" placeholder="0.0000" /><a>btc</a>
+  <p></p>
+</holder>
+<holder>
+  <span>Description:</span><hr>
+  <textarea placeholder="Description for this transaction. (e.g. Pay for hoodies)"></textarea>
+  <p></p>
+  <p></p>
+</holder>
+<holder>
+  <submit class="button s_requestTx">Next<i class="glyph-icon flaticon-continue"></i></submit>
+  <br><br>
+</holder>
+
+<style type="text/css">
+separator {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #888;
+}
+separator:before, separator:after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+  top: 50%;
+  left: 0;
+}
+separator:after {
+  left: 60%;
+}
+rightcontain print{
+  display: inline-block;
+  background-color: #eee;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0px #aaa,0 0px 0px #ccc;
+}
+rightcontain print:after{
+  content: 'Copy';
+  position:absolute;
+  right: 0;
+  padding: 0 15px;
+  text-shadow: -2px 2px #338899;
+  background-color: #55BBCC;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#55BBCC), to(#338899));
+  box-shadow: inset 0 0 0 0px #225566,0 0px 1px #183848;
+  color: #fff;
+  cursor: pointer;
+}
+rightcontain print:hover, rightcontain print:hover:after{
+  box-shadow: 0 1px 10px #aaa;
+}
+rightcontain print:active{
+  box-shadow: inset 0 0 0 1px #aaa,inset 0 5px 30px #aaa;
+}
+rightcontain print:active:after{
+  box-shadow: inset 0 0 0 1px #225566,inset 0 5px 30px #183848;
+}
+rightcontain holder .requesttx{
+  width: calc(100% - 30px);
+}
+rightcontain holder .address{
+  position:relative;
+  font-size: 14px;
+  font-family: MplusM, Tahoma, Geneva, Verdana, sans-serif;
+  color: #389;
+  text-shadow: -1px 1px #fafafa;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align:top;
+  text-overflow: ellipsis;
+}
+rightcontain modalbox [class*=" flaticon-"]:before{
+  line-height: unset;
+  cursor: pointer;
+}
+</style>

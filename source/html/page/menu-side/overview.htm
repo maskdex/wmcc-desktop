@@ -1,0 +1,56 @@
+<left>
+	<block category='overview' module='balance' tag='block[module="balance"]' active='true'></block>
+  <break></break>
+  <block category='overview' module='memory_pool' tag='block[module="memory_pool"]' active='true'></block>
+  <break></break>
+  <!--<block category='overview' module='network' tag='block[module="network"]' active='true'></block>-->
+</left>
+<right>
+  <block category='overview' module='miner' tag='block[module="miner"]' active='true'></block>
+  <break></break>
+  <block category='overview' module='block' tag='block[module="block"]' active='true'></block>
+  <break></break>
+  <block category='overview' module='recent_txn' tag='block[module="recent_txn"]' active='true'></block>
+</right>
+<style type="text/css">
+content container.right{
+	font-size: 0;
+	background: #eee;
+  width: calc(100% - 240px);
+	padding: 10px;
+}
+left, right{
+	display: inline-table;
+	width: calc(50% - 5px);
+}
+left break, right break{
+	background: #eee;
+	height: 10px;
+	display: block;
+	width: calc(100% + 10px);
+}
+right{
+	margin-left: 10px;
+}
+left block, right block{
+  background-color: #fafafa;
+	padding: 5px 10px 10px 10px;
+	display: block;
+	-webkit-box-shadow: 0px 0px 10px #CCC;
+}
+block header{
+	display: inline-block;
+	line-height: 28px;
+  height: 28px;
+	color: #338899;
+	font-weight: normal;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 10px;
+}
+block header span{
+	font-size: 13px;
+	display: inline-block;
+	border-bottom: 3px solid #CCCCCC;
+}
+</style>

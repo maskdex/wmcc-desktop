@@ -1,0 +1,6 @@
+<holder><i class="glyph-icon flaticon-wallet"></i><select name="name" onclick=""><option value="" path="">{{select_your_wallet}}</option></select></holder>
+<holder><i class="glyph-icon flaticon-date"></i><input type="text" name="dob" class="r_calendar r_digitdash" placeholder="{{date_of_birth}}"></holder>
+<render></render>
+<span class="reset s_wallet_reset">{{reset}}</span>
+<span class="button s_wallet_login s_enterPress">NEXT</span>
+<trigger script='self.node.auth.render(self.node.walletdb, self.node);'></trigger>

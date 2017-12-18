@@ -1,0 +1,76 @@
+<!--<holder><i class="glyph-icon flaticon-wallets"></i><span><print>Auth.getInfo().name;</print>
+	<a>Wallet Name<copy>Copy</copy></a></span>
+</holder>
+<holder><i class="glyph-icon flaticon-key"></i><span><print>Auth.getInfo().key.slice(0, 4).toString('hex').concat('★★★★★');</print>
+	<a>Wallet Key<copy>Copy</copy></a></span>
+</holder>
+<holder><i class="glyph-icon flaticon-coin"></i><span><print>17.8469134 wmcc</print>
+	<a>Spendable Coin<copy>Copy</copy></a></span>
+</holder>
+<holder><i class="glyph-icon flaticon-coin_add"></i><span><print>22.34691346 wmcc</print>
+	<a>Total Received<copy>Copy</copy></a></span>
+</holder>
+<holder><i class="glyph-icon flaticon-coin_minus"></i><span><print>4.5000000 wmcc</print>
+	<a>Total Spent<copy>Copy</copy></a></span>
+</holder>
+<holder><i class="glyph-icon flaticon-swap"></i><span><print>3 in / 2 out</print>
+	<a>Number of Transactions</a></span>
+</holder>-->
+<holder>
+  <print>info::getWalletInfo</print>
+</holder>
+
+<style type="text/css">
+block[module="info"] print holder *{
+  font-family: UbuntuM,sans-serif;
+}
+block[module="info"] print holder{
+	display: block;
+	width: calc(100% + 10px);
+  line-height: 44px;
+  height: 44px;
+}
+block[module="info"] print holder:hover{
+	background-color: #282838;
+}
+block[module="info"] print holder [class*=" flaticon-"]:before{
+	display: table-cell;
+	line-height: 44px;
+  height: 44px;
+	font-size: 22px;
+	padding: 0 15px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+block[module="info"] print holder span, block[module="info"] print holder span a{
+  line-height: 44px;
+  height: 44px;
+	width: 100%;
+	display: table;
+	top: 0;
+}
+block[module="info"] print holder span{
+  position: relative;
+	display: inline-block;
+  top: 3px;
+	white-space: nowrap;
+	line-height: 20px;
+	font-size: 13px;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 52px);
+	overflow: hidden;
+}
+block[module="info"] print holder span a{
+  font-family: Ubuntu,sans-serif;
+	line-height: 12px;
+	font-size: 12px;
+	padding-bottom: 7px;
+	color: #BBEEFF;
+	width: calc(100% - 20px);
+}
+block[module="info"] holder span copy{
+	float: right;
+	cursor: pointer;
+	border-bottom: 1px solid;
+}
+</style>

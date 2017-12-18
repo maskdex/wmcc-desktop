@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Node - WorldMobileCoin</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/calendar.css">
+    <script>
+      process.on('uncaughtException', function (error) {
+        console.error(error);
+      });
+      document.write(`<div></div>`);
+      const $ = require('../vendor/jquery-3.2.1.min');
+      const BigNum = require('../vendor/bignumber.min');
+      const Core = require('wmcc-core');
+      const Desktop = require('../../lib/wmcc-desktop');
+      const Node = Desktop.Node;
+      const Browser = new Desktop.browser(Node, document);
+    </script>
+  </head>
+  <body>
+  </body>
+  <script type="text/javascript" src="../vendor/date.min.js"></script>
+  <script type="text/javascript" src="../vendor/dom.js"></script>
+  <script type="text/javascript" src="../vendor/jquery.qrcode.min.js"></script>
+</html>
+<!--
+<div id="preloader"><div></div><div></div></div>
+<style type="text/css">
+  div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; display: none;}
+  div#preloader div:nth-child(1){ position: fixed; left: 0; top: 0;width: 100%; height: 100%; background: #fff; opacity: 0; }
+  div#preloader div:nth-child(2){ position: fixed; left: 0; top: 0;width: 100%; height: 100%; background: url('../image/load.gif') no-repeat center center; }
+</style>
+-->

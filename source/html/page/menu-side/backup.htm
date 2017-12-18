@@ -1,0 +1,124 @@
+<singlecontain category='backup-restore' module='backup-wallet' tag='singlecontain' active='true'></singlecontain>
+
+<style type="text/css">
+content container.right{
+  font-size: 0;
+  background: #eee;
+  width: calc(100% - 240px);
+  padding: 10px;
+}
+content singlecontain{
+  background: #fff;
+  padding: 10px 10px 10px 10px;
+  display: block;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+  height: calc(100% - 23px);
+}
+content singlecontain *{
+  font-family: Ubuntu,sans-serif;
+}
+singlecontain header{
+  display: inline-block;
+  color: #338899;
+  font-weight: normal;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 15px 0;
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+singlecontain header span{
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  font-weight: bold;
+}
+singlecontain [class*=" flaticon-"]:before{
+  display: table-cell;
+  line-height: 20px;
+  font-size: 22px;
+  color: #389;
+}
+singlecontain holder {
+  position: relative;
+  display: block;
+  clear: both;
+}
+singlecontain holder span{
+  line-height: 30px;
+}
+singlecontain holder input[type="password"]{
+  font-family: UbuntuM,sans-serif;
+  height: 20px;
+  line-height:20px;
+  padding: 5px 60px 5px 10px;
+  width: calc(100% - 70px);
+  background-color: rgba(44,44,60,.80);
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  -moz-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41),inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+container input::-webkit-input-placeholder{
+  font-size: 12px;
+}
+container.right input::-webkit-input-placeholder{
+  color: #aaa;
+  font-weight: normal;
+}
+singlecontain submit{
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px !important;
+  margin: 0 0 0 5px;
+  border-radius: 2px !important;
+  float: right;
+}
+singlecontain checkbox ul *{
+  font-family: UbuntuM,sans-serif;
+  font-size: 13px;
+}
+singlecontain holder p{
+  padding: 5px;
+  min-height: 5px;
+  width: calc(100% - 10px);
+  font-size: 11px;
+  clear: both;
+}
+singlecontain holder input.error{
+  background-color: rgba(255,0,0,.60);
+}
+singlecontain holder result{
+  white-space: nowrap;
+}
+singlecontain holder result span {
+  display: inline-block;
+  width: calc(100% - 20px);
+  margin-top: 15px;
+  font-family: Ubuntu,sans-serif;
+  color: #fff;
+  padding: 1px 10px;
+  background-color: rgba(0,100,0,.80);
+  font-size: 11px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+}
+
+singlecontain holder result span:before {
+  content: '✔';
+  margin-right: 10px;
+}
+singlecontain holder result span.error:before {
+  content: '✘';
+}
+</style>

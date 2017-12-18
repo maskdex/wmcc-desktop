@@ -1,0 +1,53 @@
+<h1>MENU</h1>
+<!--<menubutton page='menu-side_overview' tag='container.right' active='true'><i class="glyph-icon flaticon-home"></i> Transactions Record</menubutton>-->
+<menubutton category='wallet' module='manage-wallet' tag='container.right' active='true'><i class="glyph-icon flaticon-wallet_manage"></i>Manage Wallet</menubutton>
+<menubutton category='wallet' module='manage' tag='container.right'><i class="glyph-icon flaticon-wallet_manage"></i>Manage Address</menubutton>
+<menubutton category='wallet' module='record' tag='container.right'><i class="glyph-icon flaticon-record"></i>Transaction Record</menubutton>
+<hr>
+<h1>WALLET INFO</h1>
+<block category='wallet' module='info' tag='block[module="info"]' active='true'></block>
+
+<style type="text/css">
+content container.right{
+  width: calc(100% - 260px);
+	margin-left: 240px;
+	background: #eee;
+	padding: 10px;
+}
+content container.left{
+	padding: 10px;
+	width: 220px;
+	background: #3A3A4A;
+	background: -webkit-linear-gradient(left, #272737, #2C2C3C 35px, #3A3A4A);
+	color: #77EEFF;
+	overflow-y: scroll;
+}
+content container.left hr{
+	background: -webkit-linear-gradient(left, #242434, #2A2A3A);
+	height: 1px;
+	margin:10px 2px 5px 2px;
+}
+content container.left h1{
+	font-weight: bold;
+	padding: 10px 10px;
+}
+content container.left menubutton{
+	padding: 0 15px;
+	margin: 3px 0;
+	vertical-align: middle;
+	line-height: 35px;
+	cursor: pointer;
+	border-radius: 5px;
+	display: block;
+}
+content container.left menubutton:hover{
+	background-color: #282838;
+}
+content container.left menubutton[active]{
+	background-color: #282838;
+	cursor: inherit;
+}
+content container.left menubutton i{
+	margin-right: 20px;
+}
+</style>

@@ -1,0 +1,52 @@
+{
+  "name": "wmcc-desktop",
+  "version": "1.0.0-beta.1",
+  "release": "20 December 2017",
+  "productName": "wmcc-desktop",
+  "description": "WorldMobileCoin © WMCC Desktop Application",
+  "homepage": "https://github.com/WorldMobileCoin/wmcc-desktop",
+  "repository": "git://github.com/WorldMobileCoin/wmcc-desktop.git",
+  "bugs": {
+    "url": "https://github.com/WorldMobileCoin/wmcc-desktop/issues"
+  },
+  "author": "ParkAlter@WorldMobileCoin <worldmobilecoin@gmail.com>",
+  "main": "index.js",
+  "keywords": [
+    "worldmobilecoin",
+    "wmcc-node",
+    "wmcc-desktop",
+    "wmcc-application",
+    "wmcc",
+    "node",
+    "desktop",
+    "transaction",
+    "address",
+    "network",
+    "p2p",
+    "cryptocurrency",
+    "blockchain"
+  ],
+  "dependencies": {
+    "wmcc-core": "1.0.0-beta.1",
+    "node-x15": "1.0.0-beta.1",
+    "leveldown": "1.7.2",
+    "secp256k1": "3.3.0"
+  },
+  "optionalDependencies": {
+    "wmcc-native": "1.0.0-beta.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^10.1.0",
+    "electron-rebuild": "^1.6.0"
+  },
+  "license": "MIT",
+  "bin": {
+    "wmcc-build": "./bin/build.js"
+  },
+  "scripts": {
+    "build-win32": "node ./bin/build --platform=win32 --arch=ia32 --rebuild=true",
+    "build-win64": "node ./bin/build --platform=win32 --arch=x64 --rebuild=true",
+    "build-linux": "node ./bin/build --platform=linux --arch=x64 --rebuild=true",
+    "build-osx": "node ./bin/build --platform=darwin --arch=x64 --rebuild=true"
+  }
+}

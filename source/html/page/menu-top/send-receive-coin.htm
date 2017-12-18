@@ -1,0 +1,195 @@
+<container class="half">
+  <leftcontain category='send-receive' module='send-coin' tag='leftcontain' active='true'></leftcontain>
+</container>
+<container class="half">
+  <rightcontain category='send-receive' module='receive-coin' tag='rightcontain' active='true'></rightcontain>
+</container>
+
+<style type="text/css">
+content container.half{
+  background: #eee;
+  padding: 10px;
+}
+leftcontain, rightcontain{
+  border-radius: 5px;
+  background: #f5f5f5;
+  padding: 5px 10px 10px 10px;
+  display: block;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+}
+leftcontain header, rightcontain header{
+  display: inline-block;
+  color: #338899;
+  font-weight: normal;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 15px 0;
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+leftcontain header span, rightcontain header span{
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+leftcontain [class*=" flaticon-"]:before, rightcontain [class*=" flaticon-"]:before{
+  display: table-cell;
+  line-height: 20px;
+  font-size: 22px;
+  color: #389;
+}
+leftcontain holder, rightcontain holder{
+  display: block;
+  clear: both;
+}
+leftcontain holder span, rightcontain holder span{
+  line-height: 30px;
+}
+leftcontain holder *, rightcontain holder *{
+  font-family: Ubuntu,sans-serif;
+}
+leftcontain holder textarea, rightcontain holder textarea{
+  width: calc(100% - 23px);
+  height: 32px;
+  padding: 5px 10px;
+  resize: none;
+}
+leftcontain holder input, rightcontain holder input{
+  width: calc(100% - 30px);
+  height: 20px;
+  padding: 5px 10px;
+}
+leftcontain holder input, rightcontain holder input, leftcontain holder textarea, rightcontain holder textarea{
+  font-family: UbuntuM,sans-serif;
+  background-color: rgba(44,44,60,.80);
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  -moz-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41),inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+leftcontain holder input, rightcontain holder input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+leftcontain holder input::-webkit-input-placeholder, rightcontain holder input::-webkit-input-placeholder,
+leftcontain holder textarea::-webkit-input-placeholder, rightcontain holder textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: normal;
+}
+leftcontain ::-webkit-scrollbar-track, leftcontain ::-webkit-scrollbar, leftcontain ::-webkit-scrollbar-thumb,
+rightcontain ::-webkit-scrollbar-track, rightcontain ::-webkit-scrollbar, rightcontain ::-webkit-scrollbar-thumb {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}/*
+leftcontain holder input:focus, leftcontain holder textarea:focus, leftcontain holder input.focus,
+rightcontain holder input:focus, rightcontain holder textarea:focus, rightcontain holder input.focus{
+  border: 1px solid #4ab;
+}
+leftcontain holder input.focus, leftcontain holder a.focus, rightcontain holder input.focus, rightcontain holder a.focus{
+  background-color: #f1f5f6;
+  border-color: #4ab;
+}
+leftcontain holder input:focus, leftcontain holder input:focus + a,
+rightcontain holder input:focus, rightcontain holder input:focus + a {
+  border-color: #4ab;
+}*/
+leftcontain holder input.error, leftcontain holder textarea.error, leftcontain holder a.error,
+rightcontain holder input.error, rightcontain holder textarea.error, rightcontain holder a.error{
+  background-color: rgba(255,0,0,.60);
+}
+leftcontain holder input.amount, rightcontain holder input.amount{
+  width: calc(50% - 85px);
+}
+leftcontain holder a, rightcontain holder a{
+  height: 16px;
+  padding: 7px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  font-family: UbuntuM,sans-serif;
+  background-color: rgba(44,44,60,.85);
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+  font-weight: normal;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  -moz-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41),inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+leftcontain holder p, rightcontain holder p{
+  padding: 5px;
+  width: calc(100% - 10px);
+  font-size: 11px;
+  clear: both;
+}
+leftcontain holder p.error, rightcontain holder p.error{
+  color:#d23;
+}
+leftcontain holder .flaticon-swap:before, rightcontain holder .flaticon-swap:before{
+  display: inline-block;
+  width: 27px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+leftcontain button, rightcontain button{
+  padding: 8px 15px !important;
+  margin: 0 0 0 5px;
+  border-radius: 2px !important;
+}
+leftcontain submit, rightcontain submit{
+  display: inline-block;
+  text-align: center;
+  width: calc(50% - 30px);
+  padding: 10px 10px !important;
+  margin: 0 0 0 5px;
+  border-radius: 5px !important;
+}
+leftcontain holder submit [class*=" flaticon-"]:before, rightcontain holder submit [class*=" flaticon-"]:before{
+  line-height: 8px;
+  padding: 0 8px;
+  color: #eee;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+modalbox .button {
+  font-family: Ubuntu,sans-serif !important;
+  border-radius: 5px;
+}
+
+modalbox{
+  border-radius: 5px;
+  overflow: hidden;
+}
+modalbox div:nth-child(2){
+  text-align: center;
+  height: calc(100% - 40px);
+}
+modalbox div:nth-child(2):before {
+  content: ' ';
+  display: inline-block;
+  font-size: 13px;
+  height: calc(100% - 60px);
+  vertical-align: middle;
+  color: #272737;
+ }
+modalbox div:nth-child(2) span{
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 13px;
+}
+/**/
+
+</style>

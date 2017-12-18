@@ -1,0 +1,73 @@
+<!--<div>>>Switch Wallet</div>
+<div>>>Wallet Details</div>
+<div>>>Tx record</div>
+<div>>>Create Wallet</div>
+<div>>>Change Password</div>
+<div>>>Zap Txn?</div>
+<br>
+<br>
+<div>>>Manage Address (go up)</div>
+<ul>
+  <li>Create New Address by type</li>
+  <li>Remove address</li>
+  <li>Export pubkey/privkey</li>
+  <li>Import pubkey/privkey</li>
+</ul>-->
+<holder>
+  <manageprint>
+    <h2></h2>
+    <div>
+      Manage Address will be available on next WMCC-Desktop Minor (v1.1.0-beta.1) Update:
+    </div>
+    <span>Functions will be added:</span>
+    <ul>
+      <li>Create PubKeyHash, ScriptHash, WitnessPubKeyHash and WitnessScriptHash Address</li>
+      <li>Export publickey/privatekey from wallet</li>
+      <li>Import publickey/privatekey to wallet</li>
+      <li>Remove address from wallet</li>
+    </ul>  
+  </manageprint>
+</holder>
+
+<style type="text/css">
+container.right > holder{
+  padding: 0 10px 5px 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 10px);
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+  display: inline-block;
+  overflow: auto;
+}
+manageprint{
+  padding: 10px;
+}
+manageprint *{
+  font-family: Ubuntu,sans-serif;
+  color: #555;
+  font-weight: normal;
+}
+manageprint div{
+  font-family: UbuntuM,sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+manageprint span{
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+manageprint ul{
+  list-style: none;
+}
+manageprint ul li:before {
+  content: '✔';
+  margin: 0 10px;
+  color: #393;
+}
+manageprint ul li{
+  font-size: 13px;
+  line-height: 20px;
+}
+</style>

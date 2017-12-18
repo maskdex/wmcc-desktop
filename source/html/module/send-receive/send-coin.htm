@@ -1,0 +1,322 @@
+<header><i class="glyph-icon flaticon-send"></i><span>{{send_coin}}</span><p>Instantly send wmcoins to any WMCC address.</p></header>
+<holder>
+  <span>Recipient / To:</span><hr><input class="address r_checkAddress" placeholder="Paste or scan a WMCC address (e.g. WV17cxcpPmNNJY...) " />
+  <qrscan><i class="glyph-icon flaticon-qrcode" title="Scan QRCode"></i></qrscan>
+  <p></p>
+</holder>
+<holder>
+  <span>Amount:</span><hr>
+  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="wmcc" placeholder="0.0000" /><a>wmcc</a>
+  <i class="glyph-icon flaticon-swap"></i>
+  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="btc" placeholder="0.0000" /><a>btc</a>
+  <p></p>
+</holder>
+<holder>
+  <div class="button2 addaddr r_addAddress">Add Address</div>
+</holder>
+<holder>
+  <span>Description:</span><hr>
+  <textarea placeholder="Add a note to remind yourself what this transaction relates to. This note will be private and only seen by you. (e.g. Send to Bob)"></textarea>
+  <p></p>
+</holder>
+<holder>
+  <span>Transaction Fee:</span><hr>
+  <input class="amount r_fixedNumber r_checkAmount r_smartFee" coin="rate" placeholder="0.000" /><a>wmcc/kb</a>
+  <button class="button active r_normalfee">Normal</button>
+  <!--<button class="button r_priorityfee">Priority</button>-->
+  <p></p>
+</holder>
+<holder>
+  <p></p>
+  <submit class="button s_createTx s_enterPress">Continue<i class="glyph-icon flaticon-continue"></i></submit>
+  <submit class="button clearform red s_resetSendCoin">Clear All<i class="glyph-icon flaticon-erase"></i></submit>
+  <br><br>
+</holder>
+<trigger script='const fee = await self.node.info.estimateFee(); $("leftcontain .r_smartFee").val(fee).trigger("change");'></trigger>
+
+<style type="text/css">
+leftcontain holder input.address{
+  width: calc(100% - 60px);
+}
+leftcontain holder qrscan{
+  width: 40px;
+  height: 30px;
+  background-color: rgba(44,44,60,.88);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  -moz-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41),inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  float: right;
+  position: absolute;
+  text-align: center;
+}
+leftcontain holder qrscan:hover{
+  background-color: rgba(44,44,60,0.95);
+}
+leftcontain holder qrscan i:hover:before {
+  color: #3CD;
+}
+leftcontain holder qrscan:active{
+  box-shadow: inset 0 0 0 1px #012,inset 0 5px 30px #123;
+}
+leftcontain holder qrscan i:active:before {
+  color: #5EF;
+}
+leftcontain holder qrscan [class*=" flaticon-"]:before{
+  display: table-cell;
+  line-height: 15px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #5BC;
+  font-size: 20px;
+}
+leftcontain submit.addtx{
+  margin: 0;
+}
+leftcontain div.addaddr{
+  float: right;
+}
+leftcontain div.addaddr:before {
+  content: "\271A";
+}/**/
+leftcontain table.outputs{
+  table-layout: fixed;
+  border-collapse:collapse;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+leftcontain table.outputs th, leftcontain table.outputs td{
+  padding:5px 10px;
+}
+leftcontain table.outputs tr:nth-child(odd){
+  background-color: #eee;
+}
+leftcontain table.outputs th{
+  background-color: #389;
+  color: #fff;
+}
+leftcontain table.outputs td:nth-child(1), leftcontain table.outputs th:nth-child(1){
+  overflow: hidden;
+  width: 65%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+leftcontain table.outputs td:nth-child(3), leftcontain table.outputs th:nth-child(3){
+  width: 30px;
+}
+leftcontain holder .flaticon-remove:before{
+  font-size: 18px;
+  cursor: pointer;
+}
+leftcontain modalbox [class*=" flaticon-"]:before{
+  line-height: unset;
+  cursor: pointer;
+}
+leftcontain modalbox div:nth-child(2){
+  margin: 10px;
+  position: relative;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  text-align: center;
+}
+leftcontain modalbox .tx-details * {
+  font-family: UbuntuM, sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+leftcontain modalbox .tx-details {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+leftcontain modalbox .tx-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+leftcontain modalbox .tx-details table th {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+leftcontain modalbox .tx-details table td {
+  white-space: nowrap;
+  padding: 5px 10px;
+  line-height: 20px;
+  font-size: 14px;
+}
+leftcontain modalbox .tx-details table tr:nth-child(odd) td{
+  background-color: #f5f5f5;
+}
+leftcontain modalbox .tx-details table td[long] {
+  width:100%;
+  position: relative;
+}
+leftcontain modalbox .tx-details table td[long] a {
+  width:calc(100% - 20px);
+  position: absolute;
+  line-height: 30px;
+  top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+leftcontain modalbox .tx-details table td:nth-child(2),
+leftcontain modalbox .tx-details table td:nth-child(2) a {
+  font-family: MplusM, Tahoma, sans-serif;
+  font-size: 13px;
+}
+leftcontain modalbox .tx-details .button {
+  text-transform: uppercase;
+}
+leftcontain modalbox .tx-details i{
+  position: absolute;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 20px;
+  background: red;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: -webkit-linear-gradient(left, #272737, #2C2C3C 200px, #3A3A4A);
+  font-size: 18px;
+  cursor: default;
+}
+leftcontain modalbox .tx-details [class*=" flaticon-"].flaticon-otp:before {
+  font-size: 30px;
+}
+leftcontain modalbox .tx-details input[type='text'] {
+  display: inline-block;
+  width: calc(100% - 90px);
+  height: 30px;
+  margin: 0 0 20px 70px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #585868;
+}
+leftcontain modalbox .tx-details ::-webkit-input-placeholder{
+  color: #aaa;
+  font-size: 12px;
+}
+leftcontain modalbox .tx-details result span {
+  display: inline-block;
+  width: calc(100% - 20px);
+  line-height: 30px;
+  height: 30px;
+  font-family: UbuntuM,sans-serif;
+  color: #fff;
+  padding: 1px 10px;
+  background-color: rgba(0,100,0,.80);
+  font-size: 13px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+leftcontain modalbox .tx-details result span.error {
+  background-color: rgba(220,0,0,.80);
+  margin: -5px 0 15px 0;
+}
+leftcontain modalbox .tx-details result span:before {
+  content: '✔';
+  margin-right: 10px;
+}
+leftcontain modalbox .tx-details result span.error:before {
+  content: '✘';
+}
+leftcontain modalbox .tx-details result i{
+  background: rgba(0,0,0,0.3) !important;
+  position: absolute;
+  right: 0;
+  height: 30px;
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  cursor: pointer;
+  text-align: center;
+}
+leftcontain modalbox .tx-details result i:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+leftcontain modalbox .tx-details result [class*=" flaticon-"]:before{
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  vertical-align: top;
+}
+leftcontain modalbox .tx-details result i:nth-child(1){
+  right: 58px;
+  border-radius: 0;
+  border-right: 2px solid rgba(0,0,0,0.2);
+}
+/*
+leftcontain modalbox .tx-details a{
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px 20px;
+}
+leftcontain modalbox .tx-details b{
+  color: #389;
+}*/
+
+
+.button2 {    
+  display: inline-block;
+  padding: 0 20px;
+  margin: 10px;
+  font-family: UbuntuM, sans-serif;
+  height: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -2px 2px #338899;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px #278;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#55BBCC), to(#338899));
+}
+
+.button2:hover {
+  box-shadow: inset 0 0 0 1px #225566, 0 1px 5px #183848;
+}
+
+.button2:active {
+  box-shadow: inset 0 0 0 1px #225566,inset 0 5px 30px #183848;
+}
+
+.button2:focus {
+  outline: 0;
+  background: #fafafa;
+}  
+
+.button2:before {
+  background: rgba(0,0,0,.2);
+  float: left;
+  left: 0;
+  width: 25px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 10px 0 -20px;
+  padding: 0 5px;
+  box-shadow: 1px 0 0 rgba(0,0,0,.3), 1px 0 0 rgba(255,255,255,.2);
+  border-radius: 3px 0 0 3px;
+  text-shadow: none;
+  pointer-events: none;    
+}
+</style>
