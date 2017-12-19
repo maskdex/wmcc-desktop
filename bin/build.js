@@ -3,6 +3,7 @@
 const Packager = require('electron-packager');
 const Rebuild = require('electron-rebuild');
 const Path = require('path');
+const Child = require('child_process');
 
 const args = process.argv.slice(2);
 const opts = {};
@@ -31,6 +32,7 @@ const options = {
   overwrite: true,
   asar: true,
   prune: true,
+  quiet: true,
   packageManager: false
 }
 
@@ -51,7 +53,7 @@ switch (opts.platform) {
 }
 
 if (opts.rebuild) {
-  console.log(`Please wait, this may take several moments...`);
+  let spinner;
   let packages = [
     'node-x15',
     'leveldown',
@@ -62,33 +64,56 @@ if (opts.rebuild) {
   const path = './node_modules/';
 
   _rebuild();
-
+  
+  console.log(`Please wait, this may take several moments...`);
   function _rebuild() {
-    console.log(`Rebuild native module: ${packages[0]}`);
-    Rebuild.rebuild({
-      buildPath: Path.resolve(path, packages[0]),
-      electronVersion: options.electronVersion
-    }).then(() => {
-      console.log(`Done build ${packages[0]}!`);
-      packages.shift();
-      if (packages.length)
-        _rebuild();
-      else
-        _package();
-    }).catch((e) => console.error(e));
+    spinner = _spinner(`Installing ${packages[0]}...`);
+    const child = Child.exec(`cd ./node_modules/${packages[0]} && npm install`);
+  
 
+    child.on('exit', ()=>{
+      clearInterval(spinner);
+      spinner = _spinner(`Rebuild native module: ${packages[0]}`);
+      Rebuild.rebuild({
+        buildPath: Path.resolve(path, packages[0]),
+        electronVersion: options.electronVersion
+      }).then(() => {
+        clearInterval(spinner);
+        process.stdout.clearLine();
+        process.stdout.write(`\r`);
+        console.log(`✔ Finished building: ${packages[0]}!`);
+        packages.shift();
+        if (packages.length)
+          _rebuild();
+        else
+          _package();
+      }).catch((e) => console.error(e));
+    });
   }
 } else {
   _package();
 }
 
 function _package() {
-  console.log(`Compiling WMCC-Desktop Application...`);
+  let spinner = _spinner(`Compiling WMCC-Desktop Application...`);
   Packager(options, (err, appPaths) => {
+    clearInterval(spinner);
+    process.stdout.clearLine();
+    process.stdout.write(`\r`);
     if (err) {
       console.log(err);
       process.exit(-1);
     }
-    console.log(`Done! Application compiled to: ${appPaths}`);
+    console.log(`✔ Done! Application compiled to: ${Path.resolve(_dirname, appPaths)}\n`);
   });
-}
+};
+
+function _spinner(t) {
+  let x = 0;
+  const f = ["■ □ □ □ □","□ ■ □ □ □","□ □ ■ □ □","□ □ □ ■ □",
+    "□ □ □ □ ■","□ □ □ ■ □","□ □ ■ □ □","□ ■ □ □ □"];
+  return setInterval(()=>{
+    x = (x>f.length-1)?0:x;
+    process.stdout.write(`\r${f[x++]} ${t}`);
+  }, 150);
+};
