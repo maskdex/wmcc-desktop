@@ -104,7 +104,7 @@ function _package() {
       console.log(err);
       process.exit(-1);
     }
-    console.log(`✔ Done! Application compiled to: ${Path.resolve(__dirname, appPaths)}\n`);
+    console.log(`✔ Done! Application compiled to: ${Path.resolve(__dirname, appPaths[0])}\n`);
   });
 };
 
