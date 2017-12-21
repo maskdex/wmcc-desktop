@@ -68,7 +68,7 @@ if (opts.rebuild) {
   console.log(`Please wait, this may take several moments...`);
   function _rebuild() {
     spinner = _spinner(`Installing ${packages[0]}...`);
-    const child = Child.exec(`cd ./node_modules/${packages[0]} && npm install`);
+    const child = Child.exec(`cd ./node_modules/${packages[0]} && npm install --ignore-scripts`);
   
 
     child.on('exit', ()=>{
