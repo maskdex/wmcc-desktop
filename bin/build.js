@@ -78,16 +78,17 @@ if (opts.rebuild) {
         buildPath: Path.resolve(path, packages[0]),
         electronVersion: options.electronVersion
       }).then(() => {
-        clearInterval(spinner);
-        process.stdout.clearLine();
-        process.stdout.write(`\r`);
-        console.log(`✔ Finished building: ${packages[0]}!`);
+        _clearLine(spinner);
+        console.log(`\u2714 Finished building: ${packages[0]}!`);
         packages.shift();
         if (packages.length)
           _rebuild();
         else
           _package();
-      }).catch((e) => console.error(e));
+      }).catch((e) => {
+        _clearLine();
+        console.error(e);
+      });
     });
   }
 } else {
@@ -97,23 +98,26 @@ if (opts.rebuild) {
 function _package() {
   let spinner = _spinner(`Compiling WMCC-Desktop Application...`);
   Packager(options, (err, appPaths) => {
-    clearInterval(spinner);
-    process.stdout.clearLine();
-    process.stdout.write(`\r`);
+    _clearLine(spinner);
     if (err) {
       console.log(err);
       process.exit(-1);
     }
-    console.log(`✔ Done! Application compiled to: ${Path.resolve(__dirname, appPaths[0])}\n`);
+    console.log(`\u2714 Done! Application compiled to: ${Path.resolve(__dirname, appPaths[0])}\n`);
   });
-};
+}
 
 function _spinner(t) {
   let x = 0;
-  const f = ["■ □ □ □ □","□ ■ □ □ □","□ □ ■ □ □","□ □ □ ■ □",
-    "□ □ □ □ ■","□ □ □ ■ □","□ □ ■ □ □","□ ■ □ □ □"];
+  const f = ["- ----","-- ---","--- --","---- -","----- ","---- -","--- --","-- ---","- ----"," -----"];
   return setInterval(()=>{
     x = (x>f.length-1)?0:x;
     process.stdout.write(`\r${f[x++]} ${t}`);
   }, 150);
-};
+}
+
+function _clearLine (o) {
+  if (o) clearInterval(o);
+  process.stdout.clearLine();
+  process.stdout.write(`\r`);
+}
