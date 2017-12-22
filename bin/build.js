@@ -46,6 +46,7 @@ switch (opts.platform) {
     break;
   case 'linux':
     options.icon = './source/image/favicon.png';
+    options.requires = ['libXScrnSaver'];
     break;
   case 'darwin':
     options.icon = './source/image/favicon.icns';
