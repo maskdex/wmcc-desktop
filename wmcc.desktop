@@ -1,0 +1,12 @@
+#!/usr/bin/env/ xdg-open
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+GenericName=WMCC Desktop
+Name=WMCC Desktop
+Exec=wmcc-desktop
+Icon=wmcc-desktop
+Comment=WorldMobileCoin © WMCC Desktop Application
