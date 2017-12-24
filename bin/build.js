@@ -68,7 +68,7 @@ if (opts.rebuild) {
   
   console.log(`Please wait, this may take several moments`);
   function _rebuild() {
-    spinner = _spinner(`Installing ${packages[0]}...`);
+    spinner = _spinner(`Installing ${packages[0]}`);
     const child = Child.exec(`cd ./node_modules/${packages[0]} && npm install --ignore-scripts`);
 
     child.on('exit', ()=>{
@@ -103,15 +103,15 @@ function _package() {
       console.log(err);
       process.exit(-1);
     }
-    if (opts.platform === 'linux') {
+    /*if (opts.platform === 'linux') {
       const icoDir = '~/.local/share/icons';
-      /*Child.exec(`
+      Child.exec(`
         mkdir -p ${icoDir}
         && cp ./source/image/favicon.png ${icoDir}/wmcc-desktop.png
         && cp ./bin/wmcc.desktop ${appPaths[0]}/wmcc.desktop
         && ln -s ${appPaths[0]}/wmcc.desktop ~/Desktop
-      `);*/
-    }
+      `);
+    }*/
 
     console.log(`\u2714 Done! Application compiled to: ${Path.resolve(__dirname, appPaths[0])}\n`);
   });
@@ -122,7 +122,8 @@ function _spinner(t) {
   const f = ["- ----","-- ---","--- --","---- -","----- ","---- -","--- --","-- ---","- ----"," -----"];
   return setInterval(()=>{
     x = (x>f.length-1)?0:x;
-    process.stdout.write(`\r${f[x++]} ${t} ${f[x]}`);
+    process.stdout.write(`\r${f[x]} ${t} ${f[x]}`);
+    x++;
   }, 150);
 }
 
