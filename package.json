@@ -1,6 +1,6 @@
 {
   "name": "wmcc-desktop",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "release": "20 December 2017",
   "productName": "wmcc-desktop",
   "description": "WorldMobileCoin © WMCC Desktop Application",
@@ -27,13 +27,13 @@
     "blockchain"
   ],
   "dependencies": {
-    "wmcc-core": "1.0.0-beta.1",
-    "node-x15": "1.0.0-beta.1",
+    "wmcc-core": "*",
+    "node-x15": "*",
     "leveldown": "1.7.2",
     "secp256k1": "3.3.0"
   },
   "optionalDependencies": {
-    "wmcc-native": "1.0.0-beta.1"
+    "wmcc-native": "*"
   },
   "devDependencies": {
     "electron-packager": "^10.1.0",
