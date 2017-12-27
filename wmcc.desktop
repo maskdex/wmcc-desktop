@@ -10,3 +10,4 @@ Name=WMCC Desktop
 Exec=wmcc-desktop
 Icon=wmcc-desktop
 Comment=WorldMobileCoin © WMCC Desktop Application
+Categories=Network;Development;System;
