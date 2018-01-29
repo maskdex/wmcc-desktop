@@ -1,0 +1,164 @@
+<h1>
+  <tabbutton category='stratum' module='manage' tag='stratumprint' active='true'>Stratum Manager</tabbutton>
+  <tabbutton category='stratum' module='info' tag='stratumprint'>Information</tabbutton>
+</h1>
+<holder>
+  <stratumprint></stratumprint>
+</holder>
+
+<style type="text/css">
+content container.right{
+  font-size: 0;
+  background: #eee;
+  width: calc(100% - 240px);
+  padding: 10px;
+  overflow-x: hidden;
+}
+container.right tabbutton{
+  line-height: 30px;
+  height: 30px;
+}
+container.right > holder{
+  padding: 0 10px 5px 10px;
+  width: calc(100% - 20px);
+  max-height: calc(100% - 40px);
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #CCC;
+  display: inline-block;
+  overflow: auto;
+}
+stratumprint holder{
+  display: block;
+  clear: both;
+  position: relative;
+}
+stratumprint *{
+  font-family: Ubuntu;
+  font-weight: normal;
+}
+stratumprint h1 {
+  font-family: UbuntuM, sans-serif;
+  border: none !important;
+  font-size: 18px;
+  margin: 10px 0;
+}
+stratumprint h2{
+  font-weight: bold;
+  padding: 15px 0 5px 0;
+  font-size: 16px;
+}
+stratumprint table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+stratumprint table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+stratumprint table tr:nth-child(even) {
+  background-color: #fefefe;
+}
+stratumprint table td {
+  text-align: left;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  vertical-align: text-bottom;
+}
+stratumprint table td:nth-child(1) {
+  width: 30%;
+}
+stratumprint table td:nth-child(2) {
+  font-size: 13px;
+  font-family: Mplus, sans-serif;
+  color: #777;
+}
+stratumprint holder *{
+  font-family: Ubuntu,sans-serif;
+}
+stratumprint holder span{
+  line-height: 30px;
+}
+stratumprint holder input{
+  font-family: UbuntuM,sans-serif;
+  height: 20px;
+  padding: 5px 60px 5px 10px;
+  width: calc(100% - 70px);
+  background-color: rgba(44,44,60,.80);
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  -moz-box-shadow: 1px 1px 0 0 rgba(255,255,255,.41),inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.41), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+}
+stratumprint submit{
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px !important;
+  margin: 15px 0 5px 5px;
+  border-radius: 2px !important;
+  float: right;
+}
+stratumprint holder i{
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  right: 0;
+  padding: 5px 15px 5px 15px;
+  height: 20px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  cursor: pointer;
+}
+stratumprint holder i:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+stratumprint holder [class*=" flaticon-"]:before{
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+stratumprint input::-webkit-input-placeholder{
+  font-size: 12px;
+}
+container.right input::-webkit-input-placeholder{
+  color: #aaa;
+  font-weight: normal;
+}
+stratumprint table.workerlist th {
+  font-size: 13px;
+  padding: 10px 5px;
+  border-top: 1px solid #eee;
+  vertical-align: text-bottom;
+}
+stratumprint table.workerlist td {
+  font-size: 12px;
+  text-align: center;
+}
+stratumprint table.workerlist td [class*=" flaticon-"]:before {
+  cursor: pointer;
+  color: rgba(255,0,0,.6);
+}
+stratumprint table.workerlist td [class*=" flaticon-"]:hover:before {
+  color: rgba(255,0,0,1);
+}
+stratumprint p.error {
+  width: calc(100% - 20px);
+  margin-top: 15px;
+  font-family: Ubuntu,sans-serif;
+  color: #fff;
+  padding: 10px;
+  background-color: rgba(255,0,0,.80);
+  font-size: 13px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 0 rgba(255,255,255,.1), inset 1px 1px 3px 0 rgba(0,0,0,.10);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

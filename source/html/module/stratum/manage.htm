@@ -1,0 +1,22 @@
+<h2>Stratum Information</h2>
+<print>info::getStratumInfo</print>
+
+<h2>Add New Worker</h2>
+<holder>
+  <span>Worker Name:</span><hr>
+  <input type="text" class="workername" placeholder="Enter worker's name here (e.g. mygpu.worker1 or wmcc address)" maxlength="32" /><i class="glyph-icon flaticon-paste" type="prev" title="Paste from clipboard"></i>
+</holder>
+<holder>
+  <span>Worker Password:</span><hr>
+  <input type="text" class="workerpass" placeholder="Enter worker's password here (e.g. password)" /><i class="glyph-icon flaticon-paste" type="prev" title="Paste from clipboard"></i>
+</holder>
+<holder>
+  <p></p>
+  <submit class="button s_stratumAddWorker">Add Worker</submit>
+</holder>
+<holder>
+  <result></result>
+</holder>
+
+<h2>Worker List</h2>
+<print>info::getStratumUsers</print>
