@@ -87,3 +87,41 @@ _DOM.notifycontent = function(){
     first.addClass('even');
   });
 }();
+
+_DOM.timeAge = function(){
+  const interval = setInterval(() => {
+    $(document).find('.timeAge').each((i, el) => {
+      const time = age($(el).attr('value'), $(el).attr('k'));
+      $(el).html(time);
+    });
+  }, 60*1000);
+
+  /**
+   * Helper
+   */
+  function age(time, k, bool) {
+    let d = bool ? time : Math.abs(Date.now()/1000 - time);
+    let o = '';
+    let r = {};
+    let c = 0;
+    const s = {
+      year: 31536000,
+      month: 2592000,
+      week: 604800,
+      day: 86400,
+      hour: 3600,
+      minute: 60,
+      second: 1
+    }
+
+    Object.keys(s).forEach(function(i){
+      r[i] = Math.floor(d / s[i]);
+      d -= r[i] * s[i];
+      if (r[i] && c<k) {
+        c++;
+        o += ` ${r[i]} ${i}${r[i] > 1 ? 's':''}`;
+      }
+    });
+    return `${o}${bool ? '':' ago'}`;
+  }
+}();
