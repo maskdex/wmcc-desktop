@@ -7,7 +7,10 @@
 </menubutton><menubutton page='menu-top_explorer' tag='content'>{{explorer}}
 </menubutton><menubutton page='menu-top_exchange' tag='content'>{{exchange}}
 </menubutton>
-<i class="glyph-icon flaticon-logout r_menuLogout s_escapePress" title="LOGOUT"></i>
+<menuright>
+  <i class="glyph-icon flaticon-minimize r_menuMinimize" title="MINIMIZE TO TRAY"></i>
+  <i class="glyph-icon flaticon-logout r_menuLogout s_escapePress" title="LOGOUT"></i>
+</menuright>
 
 <style type="text/css">
 menu {
@@ -58,27 +61,34 @@ menu menubutton:not(.active):hover {
 	border-bottom: 3px solid #FFBB00;
 	background: #272737;
 }
-menu i.r_menuLogout {
+menu menuright {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;  
+}
+menuright i {
+  display: inline-block;
   height: 40px;
   line-height: 40px;
-  width: 60px;
+  width: 40px;
   text-align: center;
   cursor: pointer;
 }
-menu i.r_menuLogout:before {
+menuright i.flaticon-minimize:before,
+menuright i.flaticon-logout:before {
   font-size: 24px;
   color: #BEF;
   cursor: pointer;
 }
-menu i.r_menuLogout:hover {
+menuright i.flaticon-minimize:before {
+  font-size: 15px;
+}
+menuright i:hover {
   height: 37px;
   background: #272737;
   border-bottom: 3px solid #FFBB00;
 }
-menu i.r_menuLogout:hover:before {
+menuright i:hover:before {
   color: #5BC;
 }
 </style>

@@ -125,6 +125,7 @@ body {
 .flaticon-id2:before { content: "\f12b"; }
 .flaticon-account-lock:before { content: "\f12c"; }
 .flaticon-account:before { content: "\f12d"; }
+.flaticon-minimize:before { content: "\f12e"; }
 /*end font*/
 :not(input):not(textarea), :not(input):not(textarea)::after, :not(input):not(textarea)::before {
 	-webkit-user-select: none;
