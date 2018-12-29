@@ -1,19 +1,20 @@
 <header><i class="glyph-icon flaticon-send"></i><span>{{send_coin}}</span><p>Instantly send wmcoins to any WMCC address.</p></header>
 <holder>
-  <span>Recipient / To:</span><hr><input class="address r_checkAddress" placeholder="Paste or scan a WMCC address (e.g. WV17cxcpPmNNJY...) " />
+  <span>Recipient / To:</span><hr><input class="address r_address_check" placeholder="Paste or scan a WMCC address (e.g. WV17cxcpPmNNJY...) " />
   <qrscan><i class="glyph-icon flaticon-qrcode" title="Scan QRCode"></i></qrscan>
   <p></p>
 </holder>
 <holder>
   <span>Amount:</span><hr>
-  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="wmcc" placeholder="0.0000" /><a>wmcc</a>
-  <i class="glyph-icon flaticon-swap"></i>
-  <input class="amount r_fixedNumber r_checkAmount h_swapcoin" coin="btc" placeholder="0.0000" /><a>btc</a>
+  <input class="amount r_fixed_number r_swap_amount_check__h_swapcoin" coin="wmcc" placeholder="0.0000" /><a>wmcc</a>
+  <div class="button2 addaddr r_tx_address_add">Add Address</div>
+  <!--<i class="glyph-icon flaticon-swap"></i>
+  <input class="amount r_fixed_number r_swap_amount_check h_swapcoin" coin="btc" placeholder="0.0000" /><a>btc</a>-->
   <p></p>
 </holder>
-<holder>
-  <div class="button2 addaddr r_addAddress">Add Address</div>
-</holder>
+<!--<holder>
+  <div class="button2 addaddr r_tx_address_add">Add Address</div>
+</holder>-->
 <holder>
   <span>Description:</span><hr>
   <textarea placeholder="Add a note to remind yourself what this transaction relates to. This note will be private and only seen by you. (e.g. Send to Bob)"></textarea>
@@ -21,18 +22,18 @@
 </holder>
 <holder>
   <span>Transaction Fee:</span><hr>
-  <input class="amount r_fixedNumber r_checkAmount r_smartFee" coin="rate" placeholder="0.000" /><a>wmcc/kb</a>
-  <button class="button active r_normalfee">Normal</button>
-  <!--<button class="button r_priorityfee">Priority</button>-->
+  <input class="amount r_fixed_number r_swap_amount_check r_smart_fee" coin="rate" placeholder="0.000" /><a>wmcc/kb</a>
+  <button class="button active r_normal_fee">Normal</button>
+  <!--<button class="button r_priority_fee">Priority</button>-->
   <p></p>
 </holder>
 <holder>
   <p></p>
-  <submit class="button s_createTx s_enterPress">Continue<i class="glyph-icon flaticon-continue"></i></submit>
-  <submit class="button clearform red s_resetSendCoin">Clear All<i class="glyph-icon flaticon-erase"></i></submit>
+  <submit class="button s_tx_create s_press_enter">Continue<i class="glyph-icon flaticon-continue"></i></submit>
+  <submit class="button clearform red s_send_coin_reset">Clear All<i class="glyph-icon flaticon-erase"></i></submit>
   <br><br>
 </holder>
-<trigger script='const fee = await self.node.info.estimateFee(); $("leftcontain .r_smartFee").val(fee).trigger("change");'></trigger>
+<trigger script='const fee = await this.info.estimateFee(); JQuery("leftcontain .r_smart_fee").val(fee).trigger("change");'></trigger>
 
 <style type="text/css">
 leftcontain holder input.address{
@@ -79,6 +80,7 @@ leftcontain submit.addtx{
 }
 leftcontain div.addaddr{
   float: right;
+  margin: 0;
 }
 leftcontain div.addaddr:before {
   content: "\271A";

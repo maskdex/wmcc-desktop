@@ -1,4 +1,96 @@
+## GENERAL
+g_confirm = Confirm
+g_cancel = Cancel
+g_close = Close
+g_next = Next
+g_previous = Previous
+g_prev = Prev
+g_ok = OK
+g_try_again = Try again
+g_not_available = Not available
+g_invalid_file = Invalid file
+g_overwrite = Overwrite
+g_copy_to_clipboard = Copy to clipboard
+g_continue_without_copy = Continue without copy
+g_password_dont_match = Password don't match
+g_file_saved_to = File saved to %s
+g_wallet_exists = Wallet exists
+g_wallet_restored = Wallet restored
+g_config_updated = Updated! Please relogin / restart wallet to apply this configuration
+g_too_many_decimal_point = Too many decimal point
+g_invalid_amount = Invalid amount
+g_invalid_wallet_name = Invalid wallet name
+g_required = Required
+g_invalid_wmcc_address = Invalid WMCC address
+g_non_witness_pkh_address = Non-Witness/Pubkeyhash address
+g_fs_library_not_found = No such library, module or page, file path: %s
+
+## RENDER
+#### OTP
+r_otp_text = One Time Password (OTP)
+r_otp_tooltip = Copy to clipboard
+r_otp_click_to_copy =
+[array]
+  Click icon below to copy OTP to clipboard
+  or click Close to continue without copying them
+[/array]
+r_otp_note = ** Please make sure to write down the OTP somewhere
+r_otp_new_otp = Your new OTP: %s
+r_otp_err_required = Error: OTP is required
+r_otp_err_invalid = Error: Invalid OTP, number of tried (%d of %d)
+
+#### Transaction
+r_tx_confirmation = Transaction confirmation
+r_tx_summary = Transaction summary
+r_tx_id = Transaction ID
+r_tx_inputs_count = Inputs count
+r_tx_amount = Transaction amount
+r_tx_fee = Transaction fee
+r_tx_rate = Transaction rate
+r_tx_net_amount = Net amount
+r_tx_sending = Sending wallet tx (%s): %s
+r_tx_sent = Transaction sent!
+# r_tx_err_too_many_decimal_place = Too many decimal places # g_too_many_decimal_point
+r_tx_err_could_not_fully_signed = TX could not be fully signed
+r_tx_err_exceeds_policy_sigops = TX exceeds policy signing operations
+r_tx_err_exceeds_policy_weight = TX exceeds policy weight
+r_tx_err_fee_below_min_value = Fee below minimum value.<br>Minimum: %s wmcc, but got %s wmcc
+r_tx_err_payment_req_na = Request payment via URI will be available <br>on next major update
+
+#### Message
+r_msg_verification_success = The signature is valid for the address and message
+r_msg_err_addr_msg_otp_required = Error: Address, Message and OTP are required
+
+
+
+
+
 {
+    "message": {
+      "verification_success": "The signature is valid for the address and message.",
+      "error": {
+        "address_message_otp_required": "Error: Address, Message and OTP are required.",
+        "address_message_signature_required": "Error: Address, Message and Signature are required.",
+        "address_not_owned_by_wallet": "Error: Address is not owned by this wallet.",
+        "verification_failed": "Message verification failed!"
+      }
+    },
+    "wallet": {
+      "error": {
+        "invalid_wallet_bak_file": "Invalid wallet backup (.bak) file.",
+        "invalid_wallet_name": [
+          "Wallet name can only contain any of the following characters:",
+          "Numbers (0-9), Letters (A-Z and a-z), Underscores (_), Hyphens (-),",
+          "Single Space ( ), and Periods (.)"
+        ]
+      },
+      "wallet_exists_want_to_overwrite": "Wallet <a>%s</a> is already exists. Do you want to overwrite it?",
+      "wallet_exists_warning": "Warning: If you overwrite, all data in the existing wallet will be lost.",
+      "enter_password_if_set": "Enter your password if the password was set:",
+      "wallet_bak_password": "Wallet .bak Password",
+      "wallet_successfully_restored": "Your wallet <a>%s</a> account successfully restored."
+    }
+  },
   "Tools": {
     "Window": {
       "error": {

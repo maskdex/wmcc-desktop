@@ -9,7 +9,7 @@
 
 'use strict';
 // require
-const {window} = require('./lib/wmcc-window');
+const {BROWSER} = require('./lib');
 
 // window option
 const windowOptions = {
@@ -19,7 +19,7 @@ const windowOptions = {
 };
 
 // setup/initialize window
-const win = new window(windowOptions);
+const win = new BROWSER.Window(windowOptions);
 
 // start window browser
 win.start();

@@ -19,13 +19,15 @@ block[module="block"] table td[colspan='3'] {
   width: 100%;
   text-align: left;
 }
-block[module="block"] table td a{
+block[module="block"] table td a, block[module="block"] table td span{
   position: absolute;
   left: 5px;
   right: 5px;
   top: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+block[module="block"] table td a {
   color: #389;
   cursor: pointer;
 }

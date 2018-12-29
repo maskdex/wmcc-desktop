@@ -126,6 +126,12 @@ body {
 .flaticon-account-lock:before { content: "\f12c"; }
 .flaticon-account:before { content: "\f12d"; }
 .flaticon-minimize:before { content: "\f12e"; }
+.flaticon-github:before { content: "\f12f"; }
+.flaticon-ascending:before { content: "\f130"; }
+.flaticon-descending:before { content: "\f131"; }
+.flaticon-sort:before { content: "\f132"; }
+.flaticon-price-up:before { content: "\f133"; }
+.flaticon-price-down:before { content: "\f134"; }
 /*end font*/
 :not(input):not(textarea), :not(input):not(textarea)::after, :not(input):not(textarea)::before {
 	-webkit-user-select: none;
@@ -210,7 +216,7 @@ content container.half:nth-child(2){
 }
 
 content container::-webkit-scrollbar-track, console::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
 	background-color: #FFF;
 }
 
@@ -240,11 +246,11 @@ content container::-webkit-scrollbar-thumb, console::-webkit-scrollbar-thumb, ::
 }
 
 button:hover, .button:hover {
-	box-shadow: inset 0 0 0 1px #225566,0 1px 5px #183848;
+	box-shadow: inset 0 0 0 1px #225566,0 1px 5px #2C2C3C;
 }
 
 button:active, .button:active, .button.active, button.active {
-	box-shadow: inset 0 0 0 1px #225566,inset 0 5px 30px #183848;
+	box-shadow: inset 0 0 0 1px #225566,inset 0 5px 30px #2C2C3C;
 }
 
 .button.active, button.active {
@@ -265,6 +271,30 @@ button.red:active, .button.red:active, .button.active.red, button.active.red {
   box-shadow: inset 0 0 0 1px #DD2233,inset 0 5px 30px #812121;
 }
 
+.table_button {
+  border: 1px solid #3a3a4a;
+    padding: 3px 15px;
+    background-color: #556;
+    background: -webkit-linear-gradient(top, #556, #445);
+    color: #FFF !important;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.table_button:hover {
+    background-color: #445;
+    background: -webkit-linear-gradient(top, #445, #334);
+    text-decoration: none !important;
+}
+
+.table_button.disabled,
+.table_button.disabled:hover {
+    border: 1px solid #AAB;
+    background-color: #BBC;
+    background: -webkit-linear-gradient(top, #AAB, #BBC);
+    cursor: default;
+}
 
 console{
 	display: inline-block;
@@ -343,7 +373,27 @@ input[type=checkbox] {
 	padding-right: 15px;
 	color: #ddd;
 }
-
+.loading {
+  position: absolute;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.loading img {
+  width: 100%;
+  height: 90%;
+}
+.loading .wrapper {
+  z-index: -1;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  top:0;
+}
 .checkbox label.checkbox-off {
 	left: 6px;
 	background: #ddd;

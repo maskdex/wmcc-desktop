@@ -1,21 +1,21 @@
-<holder><i class="glyph-icon flaticon-wallet"></i><input type="text" name="name" class="r_maxbuffer r_isname" placeholder="{{wallet_name}}"></holder>
-<holder><i class="glyph-icon flaticon-date"></i><input type="text" name="dob" class="r_calendar r_digitdash" placeholder="{{date_of_birth}}"></holder>
-<holder><i class="glyph-icon flaticon-hint"><counter>1</counter></i><input type="text" name="question_1" class="r_maxbuffer" placeholder="{{secret_question}}"></holder>
-<holder><i class="glyph-icon flaticon-answer"><counter>1</counter></i><input type="password" name="answer_1" class="r_togglePassword" placeholder="{{secret_answer}}"></holder>
+<holder><i class="glyph-icon flaticon-wallet"></i><input type="text" name="name" class="r_max_buffer r_is_name" placeholder="{{wallet_name}}"></holder>
+<holder><i class="glyph-icon flaticon-date"></i><input type="text" name="dob" class="r_calendar r_digit_dash" placeholder="{{date_of_birth}}"></holder>
+<holder><i class="glyph-icon flaticon-hint"><counter>1</counter></i><input type="text" name="question_1" class="r_max_buffer" placeholder="{{secret_question}}"></holder>
+<holder><i class="glyph-icon flaticon-answer"><counter>1</counter></i><input type="password" name="answer_1" class="r_toggle_password" placeholder="{{secret_answer}}"></holder>
 
 <span class="insert r_secret_insert"><a>{{add_secret}}<a></span>
 <span class="reset s_secret_reset">{{reset}}</span>
-<span class="button s_wallet_create s_enterPress">{{create}}</span>
+<span class="button s_wallet_create s_press_enter">{{create}}</span>
 
 <clone id="wallet_secret">
 	<holder>
 		<i class="glyph-icon flaticon-hint"><counter>[count]</counter></i>
 		<i class="glyph-icon flaticon-remove r_wallet_remove right"></i>
-		<input type="text" name="question" class="r_maxbuffer" placeholder="{{secret_question}}">
+		<input type="text" name="question" class="r_max_buffer" placeholder="{{secret_question}}">
 	</holder>
 	<holder>
 		<i class="glyph-icon flaticon-answer"><counter>[count]</counter></i>
 		<i class="glyph-icon flaticon-remove r_wallet_remove right"></i>
-		<input type="password" name="answer" class="r_togglePassword" placeholder="{{secret_answer}}">
+		<input type="password" name="answer" class="r_toggle_password" placeholder="{{secret_answer}}">
 	</holder>
 </clone>

@@ -1,0 +1,41 @@
+{
+  "update": {
+    "major": [
+      {
+        "version": "v1.0.0-beta.1",
+        "info": [
+          "First release"
+        ]
+      }
+    ],
+    "minor": [
+      {
+        "version": "v1.1.0-beta.1",
+        "info": [
+          "Add WMCC Exchange",
+          "Rewrite client to ES6"
+        ]
+      },
+      {
+        "version": "v1.0.0-beta.1",
+        "info": [
+          "First release"
+        ]
+      }
+    ],
+    "patch": [
+      {
+        "version": "v1.1.0-beta.1",
+        "info": [
+          "Add patch update information"
+        ]
+      },
+      {
+        "version": "v1.0.0-beta.1",
+        "info": [
+          "First release"
+        ]
+      }
+    ]
+  }
+}

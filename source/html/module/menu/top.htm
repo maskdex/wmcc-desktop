@@ -1,65 +1,57 @@
 <logo><img src="../image/logo.png"></logo>
 <menubutton page='menu-top_dashboard' tag='content' active='true'>{{dashboard}}
 </menubutton><menubutton page='menu-top_wallet' tag='content'>{{wallet}}
-<!--</menubutton><menubutton page='menu-top_account' tag='content'>{{account}}
-</menubutton><menubutton page='menu-top_send-coin' tag='content'>{{send-coin}}-->
 </menubutton><menubutton page='menu-top_send-receive-coin' tag='content'>{{send-receive-coin}}
 </menubutton><menubutton page='menu-top_explorer' tag='content'>{{explorer}}
 </menubutton><menubutton page='menu-top_exchange' tag='content'>{{exchange}}
 </menubutton>
 <menuright>
-  <i class="glyph-icon flaticon-minimize r_menuMinimize" title="MINIMIZE TO TRAY"></i>
-  <i class="glyph-icon flaticon-logout r_menuLogout s_escapePress" title="LOGOUT"></i>
+  <i class="glyph-icon flaticon-minimize r_menu_minimize" title="MINIMIZE TO TRAY"></i>
+<i class="glyph-icon flaticon-logout r_menu_logout s_press_escape" title="LOGOUT"></i>
 </menuright>
 
 <style type="text/css">
 menu {
-	background-color: #2C2C3C;
-	background: -webkit-linear-gradient(left, #2C2C3C, #2C2C3C 60%, #2A2A3A);
-	height: 40px;
+  background-color: #2C2C3C;
+  background: -webkit-linear-gradient(left, #2C2C3C, #2C2C3C 60%, #2A2A3A);
+  height: 40px;
   width: 100%;
 }
-
 menu logo {
-	background-color: #272737;
-	background: -webkit-linear-gradient(left, #272737, #2C2C3C 35px, #2C2C3C);
-	display: inline-block;
-	width: 76px;
-	height: 40px;
+  background-color: #272737;
+  background: -webkit-linear-gradient(left, #272737, #2C2C3C 35px, #2C2C3C);
+  display: inline-block;
+  width: 76px;
+  height: 40px;
 }
-
 menu logo img {
-	position: absolute;
-	margin: 0 20px;
-	width: 38px;
-	height: 30px;
-	margin-top: 5px;
+  position: absolute;
+  margin: 0 20px;
+  width: 38px;
+  height: 30px;
+  margin-top: 5px;
 }
-
 menu menubutton {
-	display: inline-block;
-	font-size: 13px;
-	line-height: 40px;
-	height: 37px;
-	padding: 0 30px;
-	color: #BBEEFF;
-	cursor: pointer;
-	margin: 0px;
-	vertical-align:top;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 40px;
+  height: 37px;
+  padding: 0 30px;
+  color: #BBEEFF;
+  cursor: pointer;
+  margin: 0px;
+  vertical-align:top;
 }
-
 menu menubutton:first-of-type {
 }
-
 menu menubutton[active] {
-	cursor: inherit;
-	border-bottom: 3px solid #FFBB00;
-	background: #272737;
+  cursor: inherit;
+  border-bottom: 3px solid #FFBB00;
+  background: #272737;
 }
-
 menu menubutton:not(.active):hover {
-	border-bottom: 3px solid #FFBB00;
-	background: #272737;
+  border-bottom: 3px solid #FFBB00;
+  background: #272737;
 }
 menu menuright {
   position: absolute;

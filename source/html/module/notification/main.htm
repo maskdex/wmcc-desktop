@@ -1,5 +1,5 @@
 <notifycontent></notifycontent>
-<trigger script='self.node.attach.add("minerFoundBlock", "notification", $($("notifycontent")[0]));'></trigger>
+<trigger script='this.listener.bind("notification", "minerFoundBlock", JQuery(JQuery("notifycontent")[0]));'></trigger>
 <style type="text/css">
 notification {
   position: fixed;

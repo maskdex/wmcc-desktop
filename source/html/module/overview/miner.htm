@@ -7,12 +7,12 @@
     <toggle script="info::isMinerStarted" cls="started">
       <holder cls="started">
         <h2>{{miner_not_running}}</h2>
-        <submit class="button s_startMiner s_enterPress" click="info::startMining">{{start_mining}}</submit>
+        <submit class="button s_press_enter" click="info::startMining">{{start_mining}}</submit>
       </holder>
       <holder cls="started">
         <!--<span>Address: <print class="ellipse">info::getAddress</print></span>-->
         <print on>miner::getMinerInfo</print>
-        <submit class="button s_stopMiner s_enterPress" click="info::stopMining">{{stop_mining}}</submit>
+        <submit class="button s_press_enter" click="info::stopMining">{{stop_mining}}</submit>
       </holder>
     </toggle>
   </holder>

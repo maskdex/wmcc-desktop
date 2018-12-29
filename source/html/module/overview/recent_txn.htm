@@ -1,40 +1,6 @@
 <header><span>Recent Transactions</span></header>
 <print on>balance::getRecentTransactions</print>
-<!--<holder><i class="glyph-icon flaticon-in"></i><span>
-		<printreplaceall>27-05-2017</printreplaceall>
-		<printreplaceall>10.0000000 wmcc</printreplaceall>-->
-		<!--<a>(<printreplaceall>3AVPcBkHn4GN27F4vpXgAvD21ZVqY5J6eMs3</printreplaceall>)</a>-->
-		<!--<a><printreplaceall>Show Details</printreplaceall></a>
-	</span>
-</holder>
-<holder><i class="glyph-icon flaticon-in"></i><span>
-		<printreplaceall>25-05-2017</printreplaceall>
-		<printreplaceall>0.0012345 wmcc</printreplaceall>-->
-		<!--<a>(<printreplaceall>2AVT2TXmo3SBppCL1Jow4Kwc9gHi2UXKWbHh</printreplaceall>)</a>-->
-		<!--<a><printreplaceall>Show Details</printreplaceall></a>
-	</span>
-</holder>
-<holder><i class="glyph-icon flaticon-out"></i><span>
-		<printreplaceall>23-05-2017</printreplaceall>
-		<printreplaceall>3.5000000 wmcc</printreplaceall>-->
-		<!--<a>(<printreplaceall>1AVNfa3JyTg8TDB3pCp1QMPCeahhhcFnj5Gn</printreplaceall>)</a>-->
-		<!--<a><printreplaceall>Show Details</printreplaceall></a>
-	</span>
-</holder>
-<holder><i class="glyph-icon flaticon-out"></i><span>
-		<printreplaceall>23-05-2017</printreplaceall>
-		<printreplaceall>1.0000000 wmcc</printreplaceall>-->
-		<!--<a>(<printreplaceall>1AVgK1rmSsTr31pcoEmaQMP6sahlhcFfjuiw</printreplaceall>)</a>-->
-		<!--<a><printreplaceall>Show Details</printreplaceall></a>
-	</span>
-</holder>
-<holder><i class="glyph-icon flaticon-in"></i><span>
-		<printreplaceall>18-05-2017</printreplaceall>
-		<printreplaceall>12.3456789 wmcc</printreplaceall>-->
-		<!--<a>(<printreplaceall>1AVchJa5HF3GepHCbMWcH6paoErd8bc2JmuE</printreplaceall>)</a>-->
-		<!--<a><printreplaceall>Show Details</printreplaceall></a>
-	</span>
-</holder>-->
+
 <style type="text/css">
 block[module="recent_txn"] holder *{
   font-family: Ubuntu,sans-serif;
@@ -99,15 +65,11 @@ block[module="recent_txn"] holder span a, block[module="recent_txn"] holder span
 	font-size: 11px;
 	vertical-align: middle;
 	font-weight: normal;
-	/*width: 100%;*/
 }
 block[module="recent_txn"] holder span a label{
 	color: #389; /*color: #999;*/
 	text-decoration: underline;
 	top: -2px;
-	/*text-overflow: ellipsis;
-	max-width: calc(100% - 52px);
-	overflow: hidden;*/
 }
 block[module="recent_txn"] holder span a label:hover{
 	font-weight: bold;
@@ -122,89 +84,3 @@ block[module="recent_txn"] h2{
   line-height: 30px;
 }
 </style>
-<!--<header><span>Recent Transactions</span></header>
-<table>
-	<tr>
-		<td><i class="glyph-icon flaticon-restore"></i></td>
-		<td>
-			<span>27-05-2017</span>
-			<span>10.0000000 wmcc</span>
-			<span>(<a title="3AVPcBkHn4GN27F4vpXgAvD21ZVqY5J6eMs3">3AVPcBkHn4GN27F4vpXgAvD21ZVqY5J6eMs3</a>)</span>
-		</td>
-	</tr>
-	<tr>
-		<td><i class="glyph-icon flaticon-restore"></i></td>
-		<td>
-			<span>25-05-2017</span>
-			<span>0.0012345 wmcc</span>
-			<span>(<a title="2AVT2TXmo3SBppCL1Jow4Kwc9gHi2UXKWbHh">2AVT2TXmo3SBppCL1Jow4Kwc9gHi2UXKWbHh</a>)</span>
-		</td>
-	</tr>
-	<tr>
-		<td><i class="glyph-icon flaticon-backup"></i></td>
-		<td>
-			<span>23-05-2017</span>
-			<span>3.5000000 wmcc</span>
-			<span>(<a title="1AVNfa3JyTg8TDB3pCp1QMPCeahhhcFnj5Gn">1AVNfa3JyTg8TDB3pCp1QMPCeahhhcFnj5Gn</a>)</span>
-		</td>
-	</tr>
-	<tr>
-		<td><i class="glyph-icon flaticon-restore"></i></td>
-		<td>
-			<span>18-05-2017</span>
-			<span>12.3456789 wmcc</span>
-			<span>(<a title="1AVchJa5HF3GepHCbMWcH6paoErd8bc2JmuE">1AVchJa5HF3GepHCbMWcH6paoErd8bc2JmuE</a>)</span>
-		</td>
-	</tr>
-</table>
-<style type="text/css">
-block[module="recent_txn"] table{
-	position: relative;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	max-width: 100%;
-	text-align: left;
-}
-block[module="recent_txn"] tr:nth-child(even){
-	background: #eee;
-}
-block[module="recent_txn"] td{
-	vertical-align: middle;
-}
-block[module="recent_txn"] table tr td:nth-child(1){
-	min-width: 30px;
-	line-height: 36px;
-	text-align: center;
-}
-
-block[module="recent_txn"] td:nth-child(2){
-	padding: 8px 0;
-}
-
-block[module="recent_txn"] td:nth-child(2) span:nth-child(1){
-	left: 0;
-}
-block[module="recent_txn"] td:nth-child(2) span:nth-child(2){
-	position: absolute;
-	right: 10px;
-}
-block[module="recent_txn"] td:nth-child(2) span:nth-child(3){
-	display: block;
-	color: #999;
-}
-block[module="recent_txn"] td:nth-child(2) span:nth-child(3) a{
-	display: inline-block;
-	max-width: 200px;
-    overflow: hidden;
-	text-overflow: ellipsis;
-	vertical-align: middle;
-}
-
-block[module="recent_txn"] i.flaticon-restore:before{
-	color: #393;
-}
-block[module="recent_txn"] i.flaticon-backup:before{
-	color: #933;
-}
-</style>-->

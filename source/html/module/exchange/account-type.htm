@@ -1,0 +1,185 @@
+<grandient></grandient>
+<leftcontain>
+  <wrapper>
+    <h1>Demo Account</h1>
+    <input class="address r_exchange_demo r_exchange_server_change" name="demo" placeholder="Enter a server">
+  </wrapper>
+</leftcontain>
+<rightcontain>
+  <wrapper>
+    <h1>Real Account</h1>
+    <input class="address r_exchange_real r_exchange_server_change" name="real" placeholder="Enter a server">
+  </wrapper>
+</rightcontain>
+<sharecontain>
+  <span class="error"> </span>
+  <submit class="button s_exchange_connect">Connect</submit>
+  <a>** Market or trading price may vary according to the exchange server you trade **</a>
+</sharecontain>
+<footer>
+  <span>Latest exchange client version: <a><print>info::getExchangeLatestVersion</print></a></span>
+  <span title="https://github.com/worldmobilecoin/wmcc-exchange">
+    Powered by<i class="glyph-icon flaticon-github"></i><a>WMCC Exchange</a>
+  </span>
+</footer>
+<grandient class="bottom"></grandient>
+
+<style type="text/css">
+accounttype *{
+  font-family: Ubuntu, sans-serif;
+  color: #EEE;
+  font-weight: normal;
+}
+accounttype wrapper {
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+  position: absolute;
+}
+accounttype wrapper h1{
+  font-family: UbuntuM, sans-serif;
+  font-size: 25px;
+  line-height: 80px;
+}
+accounttype wrapper input{
+  text-align: center;
+  padding: 5px 10px;
+  color: #2C2C3C;
+  font-family: UbuntuM, sans-serif;
+}
+accounttype wrapper > input{
+  background-color: #DDD;
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+accounttype wrapper ul input{
+  line-height: 20px;
+  font-size: 15px;
+  margin: 5px 0;
+  width: 280px;
+}
+accounttype wrapper > input:focus{
+  box-shadow: 0px 0px 13px 3px #333;
+}
+accounttype wrapper ul{
+  max-height: 200px;
+  width: 300px;
+  overflow-x: auto;
+  margin: 3px auto;
+  text-align: center;
+  color: #2C2C3C;
+  background-color: #DDD;
+  padding: 10px 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px #333;
+}
+accounttype wrapper ul li{
+  line-height: 30px;
+  font-size: 15px;
+  font-family: UbuntuM, sans-serif;
+  color: #2C2C3C;
+  cursor: pointer;
+  list-style-type: none;
+}
+accounttype wrapper ul li:hover{
+  background-color: #BBB;
+}
+accounttype:after {
+  content: "";
+  background: url(../image/exchange-bg.jpg) no-repeat center center fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+leftcontain, rightcontain {
+  width: 50%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 40px;
+}
+sharecontain {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  margin-top: 270px;
+}
+sharecontain *{
+  display: block;
+}
+sharecontain .error {
+  color: #FD5;
+  line-height: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+sharecontain submit{
+  display: inline-block;
+  text-align: center;
+  padding: 15px 100px !important;
+  margin: 10px 0;
+  border-radius: 50px !important;
+  font-size: 15px;
+}
+rightcontain {
+  left: 50%;
+}
+leftcontain:after, rightcontain:after {
+  content: "";
+  background-color: #2C2C3C;
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+}
+rightcontain:after {
+  background-color: #256;
+}
+accounttype > span {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+accounttype grandient{
+  background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,.2));
+  display: block;
+  height: 5px;
+  width: 100%;
+}
+accounttype grandient.bottom{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+  bottom: 40px;
+  position: absolute;
+}
+footer {
+  position: absolute;
+  display: block;
+  background-color: #2C2C3C;
+  background: -webkit-linear-gradient(left, #2C2C3C, #2C2C3C 60%, #2A2A3A);
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  bottom: 0;
+  text-align: center;
+}
+footer span {
+  color: #689;
+  padding: 0 10px;
+}
+footer span i {
+  padding: 0 5px;
+}
+footer span *{
+  color: #8CD;
+}
+</style>
